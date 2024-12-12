@@ -24,6 +24,7 @@
     font-weight: 600;
     border-bottom: 2px solid var(--primary-color);
     padding-bottom: 10px;
+    display: inline-block; /* Restricts the border to text width */
   }
   
   h2 {

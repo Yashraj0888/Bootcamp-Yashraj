@@ -1,0 +1,9 @@
+/* variables.css */
+:root {
+    --primary-color: #363636; /* Primary color */
+    --secondary-color: #727674; /* Secondary color */
+    --font-family: 'Poppins', sans-serif; /* Font family */
+    --header-font-size: 2.5rem; /* Font size for headers */
+    --spacing: 20px; /* Spacing for margins */
+  }
+  

@@ -2,8 +2,8 @@
 
 /* Default light theme variables */
 :root {
-    --primary-color: #3498db; /* Light primary color */
-    --secondary-color: #2ecc71; /* Light secondary color */
+    --primary-color: #353535; /* Light primary color */
+    --secondary-color: #727674; /* Light secondary color */
     --background-color: #ffffff; /* Light background */
     --text-color: #333333; /* Dark text color for light mode */
     --heading-text-color: #333333; /* Heading text color for light mode */
@@ -15,8 +15,8 @@
 /* Dark theme variables */
 @media (prefers-color-scheme: dark) {
     :root {
-        --primary-color: #2980b9; /* Dark primary color */
-        --secondary-color: #27ae60; /* Dark secondary color */
+        --primary-color: #545454; /* Dark primary color */
+        --secondary-color: #838584; /* Dark secondary color */
         --background-color: #42464a; /* Dark background */
         --text-color: #ffffff; /* Light text color for dark mode */
         --heading-text-color: #ecf0f1; /* Light heading text color for dark mode */

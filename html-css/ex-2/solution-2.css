@@ -17,7 +17,7 @@ table {
   }
   
   tr:nth-child(even) {
-    background-color: #ff9b9b; /* Alternate row background color */
+    background-color: #8f8f8f; /* Alternate row background color */
   }
   
   tr:nth-child(odd) {
