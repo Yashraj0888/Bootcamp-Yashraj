@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: grid;
+    height: 100vh;
+    grid-template-areas:
+        "header header header"
+        "sidebar-left main sidebar-right";
+    grid-template-rows: 70px 1fr;
+    grid-template-columns: 200px 1fr 200px;
+}
+
+header {
+    grid-area: header;
+    background-color: gold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.sidebar-left {
+    grid-area: sidebar-left;
+    background-color: #f4f4f4;
+    padding: 15px;
+    box-shadow: inset -2px 0px 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #888 #f4f4f4; /* Custom color for scrollbars */
+}
+
+.sidebar-right {
+    grid-area: sidebar-right;
+    background-color: #f4f4f4;
+    padding: 15px;
+    box-shadow: inset 2px 0px 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f4f4f4;
+}
+
+main {
+    grid-area: main;
+    background-color: #fff;
+    padding: 20px;
+    overflow-y: auto;
+    word-wrap: break-word; /* Prevent long text from breaking the layout */
+    line-height: 1.6;
+    text-align: justify; /* Align text for better readability */
+    scrollbar-width: thin;
+    scrollbar-color: #888 #fff;
+}
+
+/* Custom scrollbar styling for WebKit browsers */
+.sidebar-left::-webkit-scrollbar,
+.sidebar-right::-webkit-scrollbar,
+main::-webkit-scrollbar {
+    width: 8px;
+}
+
+.sidebar-left::-webkit-scrollbar-track,
+.sidebar-right::-webkit-scrollbar-track,
+main::-webkit-scrollbar-track {
+    background: #f4f4f4;
+}
+
+.sidebar-left::-webkit-scrollbar-thumb,
+.sidebar-right::-webkit-scrollbar-thumb,
+main::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    body {
+        grid-template-areas:
+            "header"
+            "main"
+            "sidebar-left"
+            "sidebar-right";
+        grid-template-rows: 70px 1fr auto auto;
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar-left,
+    .sidebar-right {
+        padding: 10px;
+        box-shadow: none;
+    }
+
+    main {
+        padding: 15px;
+    }
+}
