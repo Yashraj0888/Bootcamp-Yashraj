@@ -1,58 +1,175 @@
-body {
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: grid;
     height: 100vh;
     grid-template-areas:
         "header header header"
         "sidebar-left main sidebar-right";
-    grid-template-rows: 70px 1fr;
-    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: 80px 1fr;
+    grid-template-columns: 240px 1fr 240px;
+    background-color: #f4f7fc; /* Light background color for a cleaner look */
 }
 
 header {
     grid-area: header;
-    background-color: gold;
+    background-color: #2c3e50; /* Darker shade for header */
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 600;
+    color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.sidebar-left, .sidebar-right {
+    padding: 20px;
+    background-color: #ffffff; /* White background for sidebars */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Soft shadow for sidebars */
+    overflow-y: auto;
+    border-radius: 8px; /* Rounded corners for a modern look */
+    margin: 10px;
 }
 
 .sidebar-left {
     grid-area: sidebar-left;
-    background-color: #f4f4f4;
-    padding: 15px;
-    box-shadow: inset -2px 0px 5px rgba(0, 0, 0, 0.1);
-    overflow-y: auto;
-    scrollbar-width: thin; /* For Firefox */
-    scrollbar-color: #888 #f4f4f4; /* Custom color for scrollbars */
+    margin-right: 10px;
 }
 
 .sidebar-right {
     grid-area: sidebar-right;
-    background-color: #f4f4f4;
-    padding: 15px;
-    box-shadow: inset 2px 0px 5px rgba(0, 0, 0, 0.1);
-    overflow-y: auto;
-    scrollbar-width: thin;
-    scrollbar-color: #888 #f4f4f4;
+    margin-left: 10px;
 }
 
 main {
     grid-area: main;
-    background-color: #fff;
     padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Soft shadow for main content */
+    border-radius: 8px;
     overflow-y: auto;
-    word-wrap: break-word; /* Prevent long text from breaking the layout */
+    word-wrap: break-word;
     line-height: 1.6;
-    text-align: justify; /* Align text for better readability */
-    scrollbar-width: thin;
-    scrollbar-color: #888 #fff;
+    text-align: justify;
+    font-size: 16px;
 }
 
-/* Custom scrollbar styling for WebKit browsers */
+h1, h2, h3 {
+    color: #34495e; /* Darker text for headers */
+}
+
+p {
+    color: #7f8c8d; /* Soft gray text for paragraphs */
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #3498db; /* Light blue color for links */
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2c3e50; /* Darker shade on hover */
+}
+
+@media (max-width: 1024px) {
+    body {
+        grid-template-areas:
+            "header"
+            "sidebar-left"
+            "main"
+            "sidebar-right";
+        grid-template-columns: 1fr;
+        grid-template-rows: 80px auto 1fr auto;
+    }
+
+    .sidebar-left, .sidebar-right {
+        margin: 10px 0;
+        box-shadow: none;
+        border-radius: 0; /* Reset border radius for smaller screens */
+    }
+
+    .sidebar-left {
+        order: 1; /* Move left sidebar to top */
+    }
+
+    .sidebar-right {
+        order: 3; /* Move right sidebar to bottom */
+    }
+
+    main {
+        margin: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        grid-template-areas:
+            "header"
+            "sidebar-left"
+            "main"
+            "sidebar-right";
+        grid-template-columns: 1fr;
+        grid-template-rows: 70px auto 1fr auto;
+    }
+
+    header {
+        font-size: 20px; /* Adjust header font size for smaller screens */
+    }
+
+    .sidebar-left, .sidebar-right {
+        padding: 15px;
+        margin: 5px 0;
+    }
+
+    main {
+        padding: 15px;
+        font-size: 14px; /* Slightly smaller font size for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        grid-template-areas:
+            "header"
+            "sidebar-left"
+            "main"
+            "sidebar-right";
+        grid-template-columns: 1fr;
+        grid-template-rows: 60px auto 1fr auto;
+    }
+
+    header {
+        font-size: 18px; /* Further decrease font size for very small screens */
+    }
+
+    .sidebar-left, .sidebar-right {
+        padding: 10px;
+        margin: 5px 0;
+    }
+
+    main {
+        padding: 10px;
+        font-size: 12px; /* Adjust for readability on small screens */
+    }
+}
+
+/* Custom scrollbar styling */
 .sidebar-left::-webkit-scrollbar,
 .sidebar-right::-webkit-scrollbar,
 main::-webkit-scrollbar {
@@ -62,34 +179,19 @@ main::-webkit-scrollbar {
 .sidebar-left::-webkit-scrollbar-track,
 .sidebar-right::-webkit-scrollbar-track,
 main::-webkit-scrollbar-track {
-    background: #f4f4f4;
+    background: #ecf0f1; /* Lighter background for scrollbar track */
 }
 
 .sidebar-left::-webkit-scrollbar-thumb,
 .sidebar-right::-webkit-scrollbar-thumb,
 main::-webkit-scrollbar-thumb {
-    background-color: #888;
+    background-color: #3498db;
     border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
-@media (max-width: 768px) {
-    body {
-        grid-template-areas:
-            "header"
-            "main"
-            "sidebar-left"
-            "sidebar-right";
-        grid-template-rows: 70px 1fr auto auto;
-        grid-template-columns: 1fr;
-    }
-
-    .sidebar-left,
-    .sidebar-right {
-        padding: 10px;
-        box-shadow: none;
-    }
-
-    main {
-        padding: 15px;
-    }
+.sidebar-left::-webkit-scrollbar-thumb:hover,
+.sidebar-right::-webkit-scrollbar-thumb:hover,
+main::-webkit-scrollbar-thumb:hover {
+    background-color: #2980b9; /* Darker shade on hover */
 }

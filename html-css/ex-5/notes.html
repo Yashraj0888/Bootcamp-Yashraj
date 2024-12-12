@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Layout and Media Queries Explanation</title>
+</head>
+<body>
+  <h1>Grid Layout and Media Queries Explanation</h1>
+  <p>This layout uses ***CSS Grid*** to create a flexible and responsive structure for the page. Here's a breakdown of the design and the adjustments for different screen sizes:</p>
+  <ul>
+    <li><a href="solution-1.html">Solution-1</a></li>
+    <li><a href="solution-2.html">Solution-2</a></li>
+    <li><a href="solution-3.html">Solution-3</a></li>
+  </ul>
+  <h2>Grid Layout (Desktop Version)</h2>
+  <p>The layout is divided into a 3-column grid using CSS Grid. It includes:</p>
+  <ul>
+    <li><b>Left Sidebar:</b> Defined using <code>minmax(200px, 1fr)</code> which ensures it takes up at least 200px but can expand based on available space.</li>
+    <li><b>Main Content:</b> Occupies <code>3fr</code> (3 fractions of available space), making it the primary content area.</li>
+    <li><b>Right Sidebar:</b> Also uses <code>minmax(200px, 1fr)</code>, just like the left sidebar, to ensure flexibility.</li>
+  </ul>
+  <p>The rows are defined with flexible sizing using <code>minmax(300px, 1fr)</code> for the main content area to ensure a minimum height of 300px, but it can grow if necessary.</p>
+
+  <h2>Responsive Design (Mobile Version)</h2>
+  <p>For screens smaller than 900px, the layout is adjusted:</p>
+  <ul>
+    <li>The layout changes to a single column format with <code>grid-template-columns: 1fr</code>.</li>
+    <li>The left and right sidebars are hidden using <code>display: none;</code>, freeing up space for the main content.</li>
+  </ul>
+
+  <h3>Mobile Optimizations (Below 600px)</h3>
+  <ul>
+    <li>The header's font size is reduced to <code>1.5rem</code> to improve readability on small screens.</li>
+    <li>The padding in the main content is reduced to <code>10px</code> for a more compact layout.</li>
+  </ul>
+
+  <h2>Links to the Solution Files:</h2>
+  
+</body>
+</html>
