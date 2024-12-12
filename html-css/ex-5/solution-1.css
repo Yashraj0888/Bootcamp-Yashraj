@@ -24,14 +24,14 @@ header {
     grid-area: sidebar-left;
     background-color: #f4f4f4;
     padding: 15px;
-    box-shadow: inset -2px 0px 5px rgba(0,0,0,0.1);
+    box-shadow: inset -2px 0px 5px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar-right {
     grid-area: sidebar-right;
     background-color: #f4f4f4;
     padding: 15px;
-    box-shadow: inset 2px 0px 5px rgba(0,0,0,0.1);
+    box-shadow: inset 2px 0px 5px rgba(0, 0, 0, 0.1);
 }
 
 main {
@@ -48,4 +48,45 @@ main {
 main {
     color: #111;
     line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        grid-template-areas:
+            "header"
+            "main"
+            "sidebar-left"
+            "sidebar-right";
+        grid-template-rows: 70px 1fr auto auto;
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .sidebar-left, .sidebar-right {
+        box-shadow: none;
+        padding: 10px;
+    }
+
+    main {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: 18px;
+    }
+
+    .sidebar-left, .sidebar-right {
+        padding: 8px;
+    }
+
+    main {
+        padding: 10px;
+    }
 }
