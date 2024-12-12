@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="variable-1.css">
+    <link rel="stylesheet" href="solution-1.css">
+    
     <title>Golden Layout Webpage</title>
 </head>
 <body>
@@ -11,7 +15,7 @@
         <p>Welcome to my first webpage! This site demonstrates a simple layout with various sections and navigation.</p>
     </header>
 
-    <nav>
+    <nav style="float: left; width: 20%;">
         <h2>Navigation</h2>
         <ul>
             <li><a href="#movies">Movies</a></li>
@@ -20,7 +24,7 @@
         </ul>
     </nav>
 
-    <nav>
+    <nav style="float: right; width: 20%;">
         <h2>More Links</h2>
         <ul>
             <li><a href="#about">About</a></li>
@@ -29,7 +33,7 @@
         </ul>
     </nav>
 
-    <main>
+    <main style="margin: 0 22%;">
         <section id="movies">
             <article>
                 <h2>My Favorite Movies</h2>
@@ -58,12 +62,12 @@
             <article>
                 <h2>Item List</h2>
                 <p>Below is a table listing some items along with their details:</p>
-                <table border="1">
+                <table border="1" style="width: 100%; border-collapse: collapse;">
                     <thead>
                         <tr>
-                            <th>Name</th>
-                            <th>Price</th>
-                            <th>Description</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Description</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -81,6 +85,16 @@
                             <td>Item 3</td>
                             <td>$30</td>
                             <td>The best item offering premium quality.</td>
+                        </tr>
+                        <tr>
+                            <td>Item 4</td>
+                            <td>$40</td>
+                            <td>Very expensive.</td>
+                        </tr>
+                        <tr>
+                            <td>Item 5</td>
+                            <td>$50</td>
+                            <td>Top of the line.</td>
                         </tr>
                     </tbody>
                 </table>
@@ -102,7 +116,7 @@
         </section>
     </main>
 
-    <footer>
+    <footer style="clear: both; text-align: center;">
         <p>Contact: <a href="mailto:yashraj88813@gmail.com">yashraj88813@gmail.com</a></p>
     </footer>
 </body>
