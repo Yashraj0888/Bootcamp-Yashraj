@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="variables.css">
+        <link rel="stylesheet" href="solution-1.css">
+        <title>CSS Techniques and Challenges</title>
+    </head>
+    <body>
+        
+        <header>
+            <h1>Project CSS Techniques and Challenges</h1>
+        </header>
+        
+        <main>
+            <section>
+                <h2>Solution Link</h2>
+                <p>For more information, you can check out the solution page here:</p>
+                <a href="solution.html" target="_blank">View Solution</a>
+            </section>
+        <section>
+            <h2>CSS Techniques Used</h2>
+            <p>The following CSS techniques were employed during the development of the webpage:</p>
+            <ul>
+                <li><strong>Font Styling:</strong> The body uses the Arial font family to maintain a simple, readable look. The header uses a larger font size for emphasis on the page title.</li>
+                <li><strong>Text Alignment:</strong> The text in the header and footer is centered using <code>text-align: center;</code> to keep the design neat.</li>
+                <li><strong>Spacing:</strong> Padding and margins are used throughout to ensure proper spacing between elements. The <code>padding: 20px;</code> rule is applied to the main content area, while <code>10px</code> padding is applied to the footer.</li>
+                <li><strong>Links and Hover Effects:</strong> Links are styled to have the primary color, and when hovered, the color changes to the secondary color. This provides clear visual feedback to the user.</li>
+                <li><strong>List Styling:</strong> Unordered and ordered lists are used to organize the content. Items are spaced using the <code>padding</code> property to maintain readability.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Challenges Faced in CSS</h2>
+            <p>Some of the challenges I encountered while working with CSS were:</p>
+            <ul>
+                <li><strong>Managing Layout Complexity:</strong> As the project involved multiple sections and varied layouts (floating navigation bars in Solution 2), managing spacing and positioning was challenging without using a CSS framework.</li>
+                <li><strong>Inline CSS vs External CSS:</strong> While inline CSS worked well for smaller projects, I realized that as the project grew, it became harder to manage styles. I plan to move to external stylesheets in future projects for better maintainability.</li>
+                <li><strong>Mobile Responsiveness:</strong> Ensuring the design worked well on mobile devices was a concern, especially with navigation bars that floated in the layout. I tackled this using media queries and testing the layout across multiple screen sizes.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Light and Dark Modes</h2>
+            <p>For this project, I also implemented a light and dark mode toggle feature to enhance the user experience based on their preferences. This was achieved by utilizing CSS media queries and CSS variables:</p>
+            <ul>
+                <li><strong>Light Mode:</strong> In light mode, the background color is set to a light color (e.g., <code>#f8f8f8</code>), and the text color is a darker shade (e.g., <code>#333333</code>) to maintain readability in well-lit environments.</li>
+                <li><strong>Dark Mode:</strong> For dark mode, the background color changes to a darker shade (e.g., <code>#333333</code>), and the text color is set to a lighter shade (e.g., <code>#f8f8f8</code>) to reduce eye strain in low-light environments.</li>
+                <li><strong>Automatic Detection:</strong> The theme automatically switches based on the user's system settings using the <code>@media (prefers-color-scheme)</code> CSS media query. If the user prefers a dark theme, the page switches to dark mode without any additional actions.</li>
+            </ul>
+            <p>By using CSS variables to define background and text colors for both light and dark modes, it becomes easy to switch themes dynamically without relying on JavaScript. The media query ensures the theme is responsive to user preferences, providing a seamless experience.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Contact: example@email.com</p>
+    </footer>
+
+</body>
+</html>

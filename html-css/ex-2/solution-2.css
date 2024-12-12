@@ -1,0 +1,26 @@
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--spacing, 20px);
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: var(--primary-color, black);
+    color: white;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #ff9b9b; /* Alternate row background color */
+  }
+  
+  tr:nth-child(odd) {
+    background-color: white; /* Odd row background color */
+  }
+  

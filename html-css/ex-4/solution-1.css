@@ -1,0 +1,39 @@
+/* Resetting some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Full height container */
+  body, html {
+    height: 100%;
+  }
+  
+  /* Container to center content */
+  .container {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    height: 100vh; /* 100% of the viewport height */
+  }
+  
+  /* Content block style */
+  .content {
+    width: 50vw; /* 50% of the viewport width */
+    height: 30vh; /* 30% of the viewport height */
+    padding: 2vw; /* Padding relative to viewport width */
+    background-color: lightblue;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  /* Additional styling */
+  h1 {
+    font-size: 2vw; /* Relative to viewport width */
+  }
+  
+  p {
+    font-size: 1.2vw; /* Relative to viewport width */
+  }
+  

@@ -1,0 +1,62 @@
+/* solution-3.css */
+
+/* Default light theme variables */
+:root {
+    --primary-color: #3498db; /* Light primary color */
+    --secondary-color: #2ecc71; /* Light secondary color */
+    --background-color: #ffffff; /* Light background */
+    --text-color: #333333; /* Dark text color for light mode */
+    --heading-text-color: #333333; /* Heading text color for light mode */
+    --link-color: var(--primary-color); /* Link color */
+    --paragraph-text-color: #555555; /* Paragraph text color for light mode */
+    --td-text-color: #333333; /* Table data text color for light mode */
+}
+
+/* Dark theme variables */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-color: #2980b9; /* Dark primary color */
+        --secondary-color: #27ae60; /* Dark secondary color */
+        --background-color: #42464a; /* Dark background */
+        --text-color: #ffffff; /* Light text color for dark mode */
+        --heading-text-color: #ecf0f1; /* Light heading text color for dark mode */
+        --link-color: var(--secondary-color); /* Link color */
+        --paragraph-text-color: #dcdcdc; /* Paragraph text color for dark mode */
+        --td-text-color: #696262; /* Table data text color for dark mode */
+    }
+}
+
+/* Global styles (use the variables defined above) */
+body {
+    font-family: var(--font-family, 'Arial', sans-serif);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+/* Heading text color for light and dark modes */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-text-color);
+}
+
+/* Paragraph text color for light and dark modes */
+p {
+    color: var(--paragraph-text-color);
+}
+
+/* Table data text color for light and dark modes */
+td {
+    color: var(--td-text-color);
+}

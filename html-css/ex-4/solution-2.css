@@ -1,0 +1,43 @@
+/* Resetting some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Full height container */
+  body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Container to center content */
+  .container {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    height: 100vh; /* 100% of the viewport height */
+    background-color: #f0f0f0;
+  }
+  
+  /* Content block style */
+  .content {
+    width: clamp(200px, 50vw, 600px); /* Width scales between 200px and 600px */
+    height: clamp(150px, 30vh, 400px); /* Height scales between 150px and 400px */
+    padding: 2vw; /* Padding relative to viewport width */
+    background-color: lightcoral;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  /* Heading style */
+  h1 {
+    font-size: clamp(1.5rem, 5vw, 3rem); /* Font size scales between 1.5rem and 3rem */
+  }
+  
+  /* Paragraph style */
+  p {
+    font-size: clamp(1rem, 3vw, 1.5rem); /* Font size scales between 1rem and 1.5rem */
+    margin-top: 1rem;
+  }
+  

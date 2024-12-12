@@ -1,0 +1,61 @@
+/* Center-align the content and apply basic margins */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1, h2, h3, p, ul, blockquote {
+    margin: 10px 0;  /* Apply margin to each element */
+}
+
+h1 {
+    font-size: 2.5rem; /* Title size */
+    color: #333;
+}
+
+h2 {
+    font-size: 1.8rem; /* Subtitle size */
+    color: #666;
+}
+
+h3 {
+    font-size: 1.4rem; /* Subtitle size for additional sections */
+    color: #555;
+}
+
+p {
+    font-size: 1.2rem; /* Paragraph size */
+    color: #555;
+    max-width: 600px; /* Limit the width for readability */
+}
+
+/* Styling the unordered list */
+ul {
+    list-style-type: disc;  /* Bulleted list */
+    padding-left: 20px;
+}
+
+/* Styling the blockquote */
+blockquote {
+    font-style: italic;
+    background-color: #f0f0f0;
+    border-left: 5px solid #3498db;
+    padding: 10px;
+    margin: 20px 0;
+    color: #666;
+}
+
+/* Styling inline code snippet */
+code {
+    font-family: monospace;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 2px 5px;
+    color: #e74c3c;
+}

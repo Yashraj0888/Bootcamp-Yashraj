@@ -1,0 +1,31 @@
+/* Center-align the content and apply basic margins */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1, h2, p {
+    margin: 10px 0;  /* Apply margin to each element */
+}
+
+h1 {
+    font-size: 2.5rem; /* Title size */
+    color: #333;
+}
+
+h2 {
+    font-size: 1.8rem; /* Subtitle size */
+    color: #666;
+}
+
+p {
+    font-size: 1.2rem; /* Paragraph size */
+    color: #555;
+    max-width: 600px; /* Limit the width for readability */
+}
