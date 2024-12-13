@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'Merriweather';
+    src: url('https://fonts.gstatic.com/s/merriweather/v28/u-4n0qyriQwlOrhSvowK_l5-euE.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('https://fonts.gstatic.com/s/opensans/v29/mem8YaGs126MiZpBA-UFVZ0e.woff2') format('woff2');
+}
+
+/* Base styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 20px;
+    color: #444;
+    background-color: #f9f9f9;
+}
+
+/* Heading styles */
+h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+h3 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 6px;
+}
+
+/* Paragraph styles */
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* Additional emphasis styles */
+.highlight {
+    font-style: italic;
+    color: #007acc;
+}
+
+.subtle {
+    font-size: 0.9rem;
+    color: #666;
+}

@@ -1,81 +1,57 @@
+@font-face {
+    font-family: 'Geist';
+    src: url('../ex-1/fonts/Geist-Regular.woff2') format('woff2'),
+         url('/fonts/geist-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geist';
+    src: url('../ex-1/fonts/Geist-Bold.woff2') format('woff2'),
+         url('/fonts/geist-bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geist';
+    src: url('../ex-1/fonts/Geist-Italic.woff2') format('woff2'),
+         url('/fonts/geist-italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Geist';
+    src: url('../ex-1/fonts/Geist-Light.woff2') format('woff2'),
+         url('/fonts/geist-light.woff') format('woff');
+    font-weight: lighter;
+    font-style: normal;
+}
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Geist', sans-serif;
     line-height: 1.6;
     margin: 20px;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-/* Drop Cap Styling */
-.drop-cap {
-    font-size: 4.5em;
-    font-weight: bold;
-    float: left;
-    line-height: 1;
-    margin-right: 10px;
-    margin-top: 5px;
-    color: #3498db;
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.drop-cap:hover {
-    color: #e74c3c; /* Hover color */
-    transform: scale(1.1);
-}
-
-/* Text Shadow Styling */
-.shadow-text {
-    font-size: 2.5em;
-    font-weight: bold;
-    color: #ffffff;
-    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4), -2px -2px 5px rgba(0, 0, 0, 0.2);
-    transition: text-shadow 0.3s ease;
-}
-
-.shadow-text:hover {
-    text-shadow: 6px 6px 20px rgba(0, 0, 0, 0.6), -3px -3px 10px rgba(0, 0, 0, 0.4);
-}
-
-/* Text with Image Background */
-.image-text {
-    font-size: 6em;
-    font-weight: bold;
-    background: url('https://pixlr.com/images/generator/text-to-image.webp') no-repeat center center;
-    background-size: cover;            
-    -webkit-background-clip: text;
-    color: transparent;
-    text-align: center;
-    padding: 50px;
-    line-height: 1.2;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    transition: background-size 0.5s ease;
-}
-
-.image-text:hover {
-    background-size: 110%;
 }
 
 h1 {
-    font-size: 3.5em;
-    color: #2c3e50;
-    text-align: center;
-    margin-bottom: 40px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    font-family: 'Geist', sans-serif;
+    font-weight: normal;
 }
 
-p {
-    font-size: 1.2em;
-    line-height: 1.8;
-    margin: 20px 0;
+h2 {
+    font-family: 'Geist', sans-serif;
+    font-weight: bold;
 }
 
-.explanation {
-    background-color: #f9f9f9;
-    padding: 15px;
-    border-left: 5px solid #3498db;
-    margin: 20px 0;
+p.italic {
+    font-family: 'Geist', sans-serif;
+    font-style: italic;
+}
+
+p.light {
+    font-family: 'Geist', sans-serif;
+    font-weight: lighter;
 }
