@@ -15,6 +15,8 @@
     <header>
         <h1>My First Webpage</h1>
         <p>Welcome to my first webpage! This site demonstrates a simple layout with various sections and navigation.</p>
+        
+        <button onclick="toggleTheme()">Toggle Theme</button>
     </header>
 
     <nav style="float: left; width: 15%;">
@@ -121,5 +123,18 @@
     <footer style="clear: both; text-align: center;">
         <p>Contact: <a href="mailto:yashraj88813@gmail.com">yashraj88813@gmail.com</a></p>
     </footer>
+
+    <script>
+        // Toggle between dark and light themes
+        function toggleTheme() {
+            document.body.dataset.theme = document.body.dataset.theme === 'dark' ? 'light' : 'dark';
+        }
+
+        // Set initial theme based on system preferences
+        document.addEventListener('DOMContentLoaded', () => {
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            document.body.dataset.theme = prefersDark ? 'dark' : 'light';
+        });
+    </script>
 </body>
 </html>

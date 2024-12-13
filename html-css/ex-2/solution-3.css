@@ -1,38 +1,36 @@
 /* solution-3.css */
-
-/* Default light theme variables */
-:root {
-    --primary-color: #353535; /* Light primary color */
-    --secondary-color: #727674; /* Light secondary color */
-    --background-color: #ffffff; /* Light background */
-    --text-color: #333333; /* Dark text color for light mode */
-    --heading-text-color: #333333; /* Heading text color for light mode */
-    --link-color: var(--primary-color); /* Link color */
-    --paragraph-text-color: #555555; /* Paragraph text color for light mode */
-    --td-text-color: #333333; /* Table data text color for light mode */
+*{
+    margin:10px;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Dark theme variables */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --primary-color: #545454; /* Dark primary color */
-        --secondary-color: #838584; /* Dark secondary color */
-        --background-color: #42464a; /* Dark background */
-        --text-color: #ffffff; /* Light text color for dark mode */
-        --heading-text-color: #ecf0f1; /* Light heading text color for dark mode */
-        --link-color: var(--secondary-color); /* Link color */
-        --paragraph-text-color: #dcdcdc; /* Paragraph text color for dark mode */
-        --td-text-color: #696262; /* Table data text color for dark mode */
-    }
-}
 
 /* Global styles (use the variables defined above) */
 body {
     font-family: var(--font-family, 'Arial', sans-serif);
-    background-color: var(--background-color);
-    color: var(--text-color);
     margin: 0;
     padding: 0;
+}
+body[data-theme="light"] {
+    background-color: white;
+    color:rgb(57, 55, 55);
+
+}
+
+body[data-theme="dark"]  {
+    background-color: rgb(57, 55, 55);
+    color: white;
+    h1, h2, h3 {
+        color: white;
+    };
+    button{
+        background-color: white;
+        color:rgb(57, 55, 55);
+    };
+    td{
+        color: black;
+    }
 }
 
 a {
@@ -47,9 +45,7 @@ a:hover {
 }
 
 /* Heading text color for light and dark modes */
-h1, h2, h3, h4, h5, h6 {
-    color: var(--heading-text-color);
-}
+
 
 /* Paragraph text color for light and dark modes */
 p {
@@ -57,6 +53,20 @@ p {
 }
 
 /* Table data text color for light and dark modes */
-td {
-    color: var(--td-text-color);
+
+button{
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 130px;
+}
+button:hover {
+    background-color: var(--secondary-color);
 }
