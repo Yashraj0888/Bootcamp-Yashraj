@@ -1,0 +1,88 @@
+/* Default font styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400; /* Default weight */
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Header font weights */
+  h1 {
+    font-weight: 700; /* Bold */
+    color: #2c3e50;
+  }
+  
+  h2 {
+    font-weight: 600; /* Semi-bold */
+    color: #34495e;
+  }
+  
+  h3 {
+    font-weight: 500; /* Medium */
+    color: #7f8c8d;
+  }
+  
+  /* Text sections font weights */
+  p {
+    font-weight: 400; /* Regular weight */
+    color: #333;
+  }
+  
+  /* Links */
+  a {
+    font-weight: 600; /* Semi-bold for links */
+    color: #2980b9;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Special sections with different font weights */
+  .summary, .preamble, .explanation, .participation, .benefits, .requirements {
+    font-weight: 300; /* Lighter weight for readability */
+  }
+  
+  /* Button style */
+  button {
+    font-weight: 700; /* Bold */
+    background-color: #2980b9;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #3498db;
+  }
+  
+  /* Dark Mode */
+  body.dark-mode {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  body.dark-mode h1,
+  body.dark-mode h2,
+  body.dark-mode h3 {
+    color: #ecf0f1;
+  }
+  
+  body.dark-mode p,
+  body.dark-mode a {
+    color: #bdc3c7;
+  }
+  
+  body.dark-mode button {
+    background-color: #34495e;
+  }
+  

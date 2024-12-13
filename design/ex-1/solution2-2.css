@@ -1,0 +1,28 @@
+body {
+    font-family: 'Roboto Flex', sans-serif;
+    font-variation-settings: "wght" 400, "wdth" 100, "slnt" 0;
+    line-height: 1.6;
+}
+
+h1 {
+    font-weight: 700;
+    font-variation-settings: "wght" 700, "wdth" 100, "slnt" 0;
+}
+
+h2 {
+    font-weight: 500;
+    font-variation-settings: "wght" 500, "wdth" 100, "slnt" 0;
+}
+
+p {
+    font-weight: 300;
+    font-variation-settings: "wght" 300, "wdth" 100, "slnt" -5;
+}
+
+.wide {
+    font-variation-settings: "wght" 600, "wdth" 120;
+}
+
+.slanted {
+    font-variation-settings: "slnt" 10;
+}
