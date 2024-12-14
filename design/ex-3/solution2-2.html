@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icon Grid</title>
+    <link rel="stylesheet" href="solution2-2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hover-link {
+            display: block;
+            text-align: center;
+            margin: 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .hover-link:hover {
+            background-color: #333;
+            color: white;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <!-- Font Awesome Icons -->
+        <div class="icon">
+            <i class="fas fa-heart"></i>
+        </div>
+        <div class="icon">
+            <i class="fas fa-star"></i>
+        </div>
+        <div class="icon">
+            <i class="fas fa-camera"></i>
+        </div>
+
+        <!-- SVG Icons -->
+        <div class="svg-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+            </svg>
+        </div>
+        <div class="svg-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+            </svg>
+        </div>
+        <div class="svg-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+            </svg>
+        </div>
+    </div>
+    
+    <a href="../ex-3/solution2-3.html" class="hover-link">View Icons with Hover Effects</a>
+</body>
+</html>

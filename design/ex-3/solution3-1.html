@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Navigation</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="solution3-1.css">
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <a href="#" class="nav-brand">ICONS</a>
+            <div class="nav-items">
+                <a href="#" class="nav-item">
+                    <i class="fas fa-home"></i> <span>Home</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-info-circle"></i> <span>About</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-envelope"></i> <span>Contact</span>
+                </a>
+            </div>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+    <br>
+
+    <div class="container">
+        <a href="../ex-3/solution3-2.html" class="click-me-button">Click Me</a>
+    </div>
+
+    <script>
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navItems = document.querySelector('.nav-items');
+
+        mobileMenu.addEventListener('click', () => {
+            navItems.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Navigation</title>
+    <link rel="stylesheet" href="solution3-2.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+   
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <a href="#" class="nav-brand">bUTTONS</a>
+            <div class="nav-items">
+                <a href="#" class="nav-item">
+                    <i class="fas fa-home"></i> <span>Home</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-info-circle"></i> <span>About</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-envelope"></i> <span>Contact</span>
+                </a>
+            </div>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="action-buttons">
+            <button class="btn btn-download">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                </svg>
+                Download Now
+            </button>
+            
+            <button class="btn btn-upload">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M9 16h6v-6h4l-7-7-7 7h4v6zm-4 2h14v2H5v-2z"/>
+                </svg>
+                Upload Files
+            </button>
+            <a href="../ex-3/solution3-3.html" class="btn btn-upload" style="background: linear-gradient(135deg, #FF6B6B, #FF8E53);">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                </svg>
+                Click here to see Icon Spacing Demo
+            </a>
+
+        </div>
+    </div>
+
+    <script>
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navItems = document.querySelector('.nav-items');
+
+        mobileMenu.addEventListener('click', () => {
+            navItems.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

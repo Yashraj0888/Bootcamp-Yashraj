@@ -1,0 +1,17 @@
+.icon {
+  font-size: 2em;
+  margin-right: 10px;
+}
+/* Style the home icon */
+.icon.home {
+  color: blue;
+}
+/* Style the user icon */
+.icon.user {
+  color: green;
+}
+/* Style the SVG icon */
+.icon.svg-icon {
+  width: 2em;
+  height: 2em;
+}

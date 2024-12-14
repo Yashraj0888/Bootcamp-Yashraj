@@ -46,7 +46,7 @@ h1 {
     margin-bottom: 1rem;
     background: linear-gradient(120deg, #2c3e50, #3498db);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background-clip: text;    -webkit-text-fill-color: transparent;
 }
 
 .contrast-section {

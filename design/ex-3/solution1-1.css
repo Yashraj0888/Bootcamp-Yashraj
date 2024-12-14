@@ -1,0 +1,14 @@
+
+    .icon {
+      font-size: 2em;
+      margin-right: 10px;
+    }
+    .icon.home {
+      color: blue;
+    }
+    .icon.user {
+      color: green;
+    }
+    .icon.envelope {
+      color: red;
+    }

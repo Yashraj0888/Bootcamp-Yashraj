@@ -1,0 +1,124 @@
+
+:root {
+    --icon-size: 24px;
+    --icon-spacing: 12px;
+    --primary-color: #1a1a2e;
+    --accent-color: #00fff5;
+    --text-color: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.icon-showcase {
+    max-width: 800px;
+    margin: 2rem auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.section {
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+/* Horizontal Icon Layout */
+.horizontal-icons {
+    display: flex;
+    gap: var(--icon-spacing);
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+/* Vertical Icon Layout */
+.vertical-icons {
+    display: flex;
+    flex-direction: column;
+    gap: var(--icon-spacing);
+}
+
+/* Grid Icon Layout */
+.grid-icons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: var(--icon-spacing);
+}
+
+/* Icon Item Styles */
+.icon-item {
+    display: flex;
+    align-items: center;
+    gap: var(--icon-spacing);
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    color: var(--text-color);
+    transition: transform 0.3s ease;
+}
+
+.icon-item:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.icon-item i {
+    font-size: var(--icon-size);
+    width: var(--icon-size);
+    height: var(--icon-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-color);
+}
+
+/* List Icon Layout */
+.list-icons {
+    list-style: none;
+}
+
+.list-icons li {
+    margin-bottom: var(--icon-spacing);
+}
+
+/* Circular Icon Layout */
+.circular-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.circular-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.circular-icon:hover {
+    background: var(--accent-color);
+}
+
+.circular-icon:hover i {
+    color: var(--primary-color);
+}
