@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Color Spectrum Exploration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="solution2-3.css">
+
+</head>
+<body>
+    <div class="color-exploration-container">
+        <h1 class="section-title"> Color swatch</h1>
+        <div class="color-grid" id="colorGrid"></div>
+    </div>
+
+    <script>
+        // Base hue values
+        var baseHues = [0, 30, 60, 120, 180, 240, 270, 300];
+
+        // Generate color variations
+        var colorVariations = baseHues.flatMap(function(hue) { 
+            return [
+                // Variations in saturation
+                { hue: hue, saturation: 100, lightness: 50 },
+                { hue: hue, saturation: 75, lightness: 50 },
+                { hue: hue, saturation: 50, lightness: 50 },
+                { hue: hue, saturation: 25, lightness: 50 },
+                
+                // Variations in lightness
+                { hue: hue, saturation: 100, lightness: 25 },
+                { hue: hue, saturation: 100, lightness: 40 },
+                { hue: hue, saturation: 100, lightness: 60 },
+                { hue: hue, saturation: 100, lightness: 75 }
+            ];
+        });
+
+        // Create color swatches
+        var grid = document.getElementById('colorGrid');
+        colorVariations.forEach(function(color) {
+            var swatch = document.createElement('div');
+            swatch.className = 'color-swatch';
+            
+            // Set background color
+            swatch.style.backgroundColor = 'hsl(' + color.hue + ', ' + color.saturation + '%, ' + color.lightness + '%)';
+            
+            // Create label
+            var label = document.createElement('div');
+            label.className = 'color-label';
+            label.textContent = 'HSL: ' + color.hue + ', ' + color.saturation + '%, ' + color.lightness + '%';
+            
+            swatch.appendChild(label);
+            grid.appendChild(swatch);
+        });
+    </script>
+</body>
+</html>

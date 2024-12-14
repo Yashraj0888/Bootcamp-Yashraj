@@ -1,0 +1,79 @@
+/* Dark mode variables */
+:root[data-theme="dark"] {
+    --primary-color: #121212;
+    --secondary-color: #181818;
+    --text-color: #5e5b5b;
+    --accent-color: #4474b6; /* Accent color for dark mode */
+    --circle-color: #2daab7;
+}
+
+/* Default light mode variables */
+:root {
+    --circle-color: #ffffff;
+    
+}
+
+/* Dark mode toggle button */
+.dark-mode-toggle {
+    position: fixed;
+    top: 10px;
+    right: 15px;
+    width: 70px;
+    height: 35px;
+    background: linear-gradient(135deg, #1a2634 0%, #e63946 100%); /* Light mode gradient */
+    border-radius: 20px;
+    border: 1px solid #757171;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5px;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    outline: none;
+    box-sizing: border-box; /* Ensure padding is considered within the element's total width/height */
+}
+
+/* Circle inside the toggle */
+.dark-mode-toggle::after {
+    content: '';
+    width: 25px;
+    height: 25px;
+    background-color: var(--circle-color);
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    transform: translateX(0);
+}
+
+/* When dark mode is active */
+:root[data-theme="dark"] .dark-mode-toggle {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+}
+
+:root[data-theme="dark"] .dark-mode-toggle::after {
+    transform: translateX(35px); /* Move the circle to the other end */
+    background-color: var(--accent-color);
+}
+
+/* Hover and focus effects */
+.dark-mode-toggle:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode-toggle:focus {
+    outline: 2px solid var(--circle-color);
+}
+
+/* Active (pressed) effect */
+.dark-mode-toggle:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* When dark mode is active, change the accent color for links */
+:root[data-theme="dark"] .summary a {
+    background-color: var(--accent-color); /* Accent color for dark mode */
+}

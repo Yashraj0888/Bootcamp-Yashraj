@@ -1,0 +1,192 @@
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right bottom, #f6f6f6, #e9e9e9);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        h1, h2, h3 {
+            padding: 1.5rem 3rem;
+            border-radius: 15px;
+            margin: 1rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            animation: shimmer 3s infinite;
+            background-size: 200% 200%;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        h1 {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #ff6b6b);
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            box-shadow: 0 10px 20px rgba(255, 107, 107, 0.2);
+        }
+
+        h2 {
+            background: linear-gradient(135deg, #a8e6cf, #3d84a8, #a8e6cf);
+            font-size: 2rem;
+            box-shadow: 0 8px 16px rgba(168, 230, 207, 0.2);
+        }
+
+        h3 {
+            background: linear-gradient(225deg, #ff9a9e, #fad0c4, #ff9a9e);
+            font-size: 1.75rem;
+            box-shadow: 0 6px 12px rgba(255, 154, 158, 0.2);
+        }
+        h4 {
+            color: #2c3e50;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+
+        .explanation {
+            background: linear-gradient(to right, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85));
+            padding: 1.5rem 2.5rem;
+            border-radius: 20px;
+            margin: 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+            max-width: 700px;
+            line-height: 1.8;
+            color: #2c3e50;
+            backdrop-filter: blur(8px);
+            transform: translateY(0);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .explanation:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .button-container {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        button {
+            padding: 15px 30px;
+            margin: 10px;
+            border: none;
+            border-radius: 50px;
+            color: white;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        button::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: rotate(45deg);
+            transition: all 0.3s;
+            opacity: 0;
+        }
+
+        button:hover {
+            transform: scale(1.05) translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        button:hover::after {
+            opacity: 1;
+        }
+
+        .btn-1 {
+            background: radial-gradient(circle at center, #ff6b6b, #ee5253);
+        }
+
+        .btn-2 {
+            background: radial-gradient(circle at top left, #4ecdc4, #2d767f);
+        }
+
+        .btn-3 {
+            background: radial-gradient(ellipse at bottom right, #a8e6cf, #3d84a8);
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.75rem; }
+            h3 { font-size: 1.5rem; }
+            button { padding: 12px 24px; }
+            .explanation {
+                margin: 1rem;
+                padding: 1rem 1.5rem;
+            }
+        }
+
+        .feature-highlight {
+            border-left: 4px solid #4ecdc4;
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-size: 1.1rem;
+        }
+
+        .section-title {
+            color: #2c3e50;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .gradient-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .color-preview {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 2px solid white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .feature-list li::before {
+            content: '✨';
+            position: absolute;
+            left: 0;
+            color: #4ecdc4;
+        }
