@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Images Guide</title>
+    <link rel="stylesheet" href="solution3-2.css">
+</head>
+<body>
+    <h1>Complete Guide to Responsive Images</h1>
+    
+    <div class="intro-text">
+        <h2>What are Responsive Images?</h2>
+        <p>Responsive images automatically adapt to different screen sizes and device capabilities. They help in:</p>
+        <ul>
+            <li>Reducing bandwidth usage on mobile devices</li>
+            <li>Improving page load times</li>
+            <li>Providing optimal image quality for each device</li>
+            <li>Enhancing user experience across all platforms</li>
+        </ul>
+    </div>
+
+    <div class="screen-size"></div>
+
+    <div class="image-container">
+        <h2>Example 1: Nature Scenes Across Devices</h2>
+        <div class="breakpoint-info">
+            <strong>Breakpoints Explained:</strong>
+            <ul>
+                <li>Mobile: Up to 768px - Vertical orientation optimized for phone screens</li>
+                <li>Tablet: 769px to 1024px - Square format for medium-sized displays</li>
+                <li>Desktop: 1025px and above - Wide panoramic view for large screens</li>
+            </ul>
+        </div>
+
+        <picture>
+            <source 
+                media="(min-width: 1025px)" 
+                srcset="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=1200"
+                type="image/jpeg">
+            <source 
+                media="(min-width: 769px)" 
+                srcset="https://images.unsplash.com/photo-1542202229-7d93c33f5d07?w=800"
+                type="image/jpeg">
+            <source 
+                media="(max-width: 768px)" 
+                srcset="https://images.unsplash.com/photo-1507041957456-9c397ce39c97?w=400"
+                type="image/jpeg">
+            <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800"
+                 alt="Responsive nature scene"
+                 width="100%"
+                 height="auto">
+        </picture>
+
+        <div class="tech-note">
+            <strong>Technical Implementation:</strong>
+            <p>This example uses the &lt;picture&gt; element with multiple &lt;source&gt; elements to serve different images based on media queries. The browser automatically selects the first matching source.</p>
+        </div>
+    </div>
+
+    <div class="image-container">
+        <h2>Example 2: Urban Landscapes</h2>
+        <div class="breakpoint-info">
+            <strong>Image Selection Strategy:</strong>
+            <ul>
+                <li>Mobile: Vertical city shot emphasizing height</li>
+                <li>Tablet: Balanced city view with medium aspect ratio</li>
+                <li>Desktop: Panoramic cityscape showcasing width</li>
+            </ul>
+        </div>
+
+        <picture>
+            <source 
+                media="(min-width: 1025px)" 
+                srcset="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200"
+                type="image/jpeg">
+            <source 
+                media="(min-width: 769px)" 
+                srcset="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800"
+                type="image/jpeg">
+            <source 
+                media="(max-width: 768px)" 
+                srcset="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=400"
+                type="image/jpeg">
+            <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800"
+                 alt="Responsive cityscape"
+                 width="100%"
+                 height="auto">
+        </picture>
+
+        <div class="tech-note">
+            <strong>Best Practices:</strong>
+            <ul>
+                <li>Always provide a fallback &lt;img&gt; for older browsers</li>
+                <li>Use appropriate image sizes for each breakpoint</li>
+                <li>Consider art direction for different screen sizes</li>
+                <li>Optimize images for web delivery</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="image-container">
+        <h2>
+            <a href="../ex-4/solution3-3.html">Click for Lazy Loading→</a>
+        </h2>
+    </div>
+</body>
+</html>

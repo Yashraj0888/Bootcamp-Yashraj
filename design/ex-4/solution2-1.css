@@ -1,0 +1,99 @@
+
+        body {
+            background: linear-gradient(to right, #f8f9fa, #e9ecef);
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .gallery {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h1 {
+            color: #2d3436;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .gallery img {
+            width: 300px;
+            height: 225px;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        .gallery img:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        picture {
+            display: inline-block;
+            margin: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .gallery img {
+                width: 200px;
+                height: 150px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .gallery img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        .gallery p {
+        font-size: 1.2rem;
+        color: #2d3436;
+        margin-top: 20px;
+        font-weight: 500;
+        text-transform: capitalize;
+        letter-spacing: 1px;
+    }
+
+    .gallery p a {
+        color: #0984e3;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .gallery p a:hover {
+        color: #74b9ff;
+        text-decoration: underline;
+        transform: scale(1.1);
+    }

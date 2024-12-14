@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimized Images Gallery</title>
+    <link rel="stylesheet" href="solution2-1.css">
+</head>
+<body>
+    <div class="gallery">
+        <h1>Optimized Images Gallery</h1>
+        <div class="image-container">
+            <picture>
+                <source srcset="https://picsum.photos/300/225?random=1 1x, https://picsum.photos/600/450?random=1 2x">
+                <img src="https://picsum.photos/300/225?random=1" alt="Gallery Image 1">
+            </picture>
+            <picture>
+                <source srcset="https://picsum.photos/300/225?random=2 1x, https://picsum.photos/600/450?random=2 2x">
+                <img src="https://picsum.photos/300/225?random=2" alt="Gallery Image 2">
+            </picture>
+            <picture>
+                <source srcset="https://picsum.photos/300/225?random=3 1x, https://picsum.photos/600/450?random=3 2x">
+                <img src="https://picsum.photos/300/225?random=3" alt="Gallery Image 3">
+            </picture>
+        </div>
+        <p>Want to see Some more effects ?</p>
+        <p><a href="../ex-4/solution2-2.html">Click here for new image effect</a></p>
+    </div>
+</body>
+</html>

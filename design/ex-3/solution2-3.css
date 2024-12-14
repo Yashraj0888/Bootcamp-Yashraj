@@ -19,7 +19,7 @@
             margin: 2rem 0;
             background: linear-gradient(to right, #fff, #7ee8fa, #fff);
             -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            background-clip: text;            -webkit-text-fill-color: transparent;
             text-shadow: 0 0 20px rgba(126, 232, 250, 0.5);
             animation: glow 2s ease-in-out infinite;
         }
@@ -114,6 +114,39 @@
             margin-top: 1rem;
             line-height: 1.6;
         }
+        /* Style for the link */
+.navigation-link {
+    display: block;
+    text-align: center;
+    margin: 3rem auto;
+    max-width: 800px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #7ee8fa;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    transition: all 0.4s ease-in-out;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.navigation-link:hover {
+      color: #fff;
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+.navigation-link:active {
+    transform: scale(1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
 
         @media (max-width: 1200px) {
             .icon-container {

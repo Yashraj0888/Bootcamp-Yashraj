@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Lazy Loading Gallery</title>
+    <link rel="stylesheet" href="solution3-3.css">
+</head>
+<body>
+    <h1>Premium Image Gallery</h1>
+
+    <div class="image-container">
+        <h2>Urban Night</h2>
+        <div class="image-wrapper">
+            <div class="loader">
+                <div class="loader-ring"></div>
+                <div class="loader-ring"></div>
+                <div class="loader-ring"></div>
+            </div>
+            <div class="pulse"></div>
+            <img class="lazy-image" 
+                 data-src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df"
+                 alt="City skyline at night">
+        </div>
+        <div class="image-info">New York City Skyline</div>
+    </div>
+
+    <div class="image-container">
+        <h2>Desert Dreams</h2>
+        <div class="image-wrapper">
+            <div class="loader">
+                <div class="loader-ring"></div>
+                <div class="loader-ring"></div>
+                <div class="loader-ring"></div>
+            </div>
+            <div class="pulse"></div>
+            <img class="lazy-image"
+                 data-src="https://images.unsplash.com/photo-1509316785289-025f5b846b35"
+                 alt="Desert sand dunes">
+        </div>
+        <div class="image-info">Sahara Desert at Dawn</div>
+    </div>
+
+    <div class="image-container">
+        <h2>Northern Lights</h2>
+        <div class="image-wrapper">
+            <div class="loader">
+                <div class="loader-ring"></div>
+                <div class="loader-ring"></div>
+                <div class="loader-ring"></div>
+            </div>
+            <div class="pulse"></div>
+            <img class="lazy-image"
+                 data-src="https://images.unsplash.com/photo-1483347756197-71ef80e95f73"
+                 alt="Aurora Borealis">
+        </div>
+        <div class="image-info">Iceland Aurora Display</div>
+    </div>
+
+    <div class="image-container">
+        <h2>Tropical Paradise</h2>
+        <div class="image-wrapper">
+            <div class="loader">
+                <div class="loader-ring"></div>
+                <div class="loader-ring"></div>
+                <div class="loader-ring"></div>
+            </div>
+            <div class="pulse"></div>
+            <img class="lazy-image"
+                 data-src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2"
+                 alt="Tropical beach">
+        </div>
+        <div class="image-info">Maldives Crystal Waters</div>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const lazyImages = document.querySelectorAll('.lazy-image');
+            
+            const loadImage = (img) => {
+                img.src = img.dataset.src;
+                img.onload = () => {
+                    setTimeout(() => {
+                        img.classList.add('loaded');
+                        const wrapper = img.closest('.image-wrapper');
+                        wrapper.querySelector('.loader').style.display = 'none';
+                        wrapper.querySelector('.pulse').style.display = 'none';
+                    }, 1000); // 1 second delay to show animation
+                };
+            };
+
+            const imageObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        loadImage(entry.target);
+                        imageObserver.unobserve(entry.target);
+                    }
+                });
+            }, {
+                rootMargin: '50px 0px',
+                threshold: 0.1
+            });
+
+            lazyImages.forEach(img => imageObserver.observe(img));
+        });
+    </script>
+</body>
+</html>

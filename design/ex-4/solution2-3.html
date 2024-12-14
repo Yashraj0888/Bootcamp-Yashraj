@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant Image Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="solution2-3.css">
+</head>
+<body>
+    <header class="header">
+        <img class="header-image" src="https://picsum.photos/1920/1080?random=0" alt="Header Image">
+        <div class="header-content">
+            <h1>Curated Gallery</h1>
+            <p>A collection of breathtaking moments captured in time</p>
+        </div>
+        <div class="scroll-indicator">↓</div>
+    </header>
+
+    <div class="gallery">
+        <div class="image-container">
+            <picture>
+                <source srcset="https://picsum.photos/300/400?random=1 1x, https://picsum.photos/600/800?random=1 2x">
+                <img src="https://picsum.photos/300/400?random=1" alt="Gallery Image 1">
+            </picture>
+            <picture>
+                <source srcset="https://picsum.photos/300/400?random=2 1x, https://picsum.photos/600/800?random=2 2x">
+                <img src="https://picsum.photos/300/400?random=2" alt="Gallery Image 2">
+            </picture>
+            <picture>
+                <source srcset="https://picsum.photos/300/400?random=3 1x, https://picsum.photos/600/800?random=3 2x">
+                <img src="https://picsum.photos/300/400?random=3" alt="Gallery Image 3">
+            </picture>
+        </div>
+    </div>
+
+    <a class="link" href="../ex-4/solution3-1.html">Implement responsive images using the &lt;picture&gt; element</a>
+</body>
+</html>

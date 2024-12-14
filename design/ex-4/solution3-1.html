@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Images Example</title>
+    <link rel="stylesheet" href="solution3-1.css">
+</head>
+<body>
+    <h1>Responsive Mountain Scenery</h1>
+    
+    <picture>
+        <!-- Large viewport image -->
+        <source 
+            media="(min-width: 1024px)" 
+            srcset="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200"
+            type="image/jpeg">
+            
+        <!-- Medium viewport image -->
+        <source 
+            media="(min-width: 768px)" 
+            srcset="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800"
+            type="image/jpeg">
+            
+        <!-- Small viewport image -->
+        <source 
+            media="(min-width: 320px)" 
+            srcset="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400"
+            type="image/jpeg">
+            
+        <!-- Fallback image -->
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4" 
+             alt="Beautiful mountain landscape with snow peaks" 
+             width="100%" 
+             height="auto">
+    </picture>
+
+    <h1>Responsive City Skyline</h1>
+    
+    <picture>
+        <!-- Large viewport image -->
+        <source 
+            media="(min-width: 1024px)" 
+            srcset="https://images.pexels.com/photos/466685/pexels-photo-466685.jpeg?w=1200"
+            type="image/jpeg">
+            
+        <!-- Medium viewport image -->
+        <source 
+            media="(min-width: 768px)" 
+            srcset="https://images.pexels.com/photos/466685/pexels-photo-466685.jpeg?w=800"
+            type="image/jpeg">
+            
+        <!-- Small viewport image -->
+        <source 
+            media="(min-width: 320px)" 
+            srcset="https://images.pexels.com/photos/466685/pexels-photo-466685.jpeg?w=400"
+            type="image/jpeg">
+            
+        <!-- Fallback image -->
+        <img src="https://images.pexels.com/photos/466685/pexels-photo-466685.jpeg" 
+             alt="Modern city skyline at night" 
+             width="100%" 
+             height="auto">
+    </picture>
+
+    <div class="link-container">
+        <a href="../ex-4/solution3-2.html">Create responsive images</a>
+    </div>
+</body>
+</html>
