@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medium-Style Article</title>
+    <link rel="stylesheet" href="solution1-2.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <img src="https://cdn.svgporn.com/logos/medium.svg" alt="Medium" class="logo">
+            <div class="nav-right">
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <div class="author-info">
+                <div class="author-avatar">
+                    <img src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c" alt="John Doe">
+                </div>
+                <div class="author-details">
+                    <div class="author-name">John Doe</div>
+                    <div class="post-date">
+                        Oct 15 · 5 min read
+                        <span class="member-only">Member-only story</span>
+                    </div>
+                </div>
+            </div>
+            <h1 class="article-title">The Art of Building Modern Web Applications</h1>
+        </header>
+
+        <div class="featured-image">
+            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6" alt="Web Development">
+        </div>
+
+        <article class="article-content">
+            <p>
+                In the ever-evolving landscape of web development, creating modern applications requires a deep understanding of both fundamental principles and cutting-edge technologies.
+            </p>
+
+            <h2>The Foundation of Modern Web Development</h2>
+            <p>
+                Modern web development stands on three core pillars: performance, accessibility, and user experience. Each of these elements plays a crucial role in creating successful web applications that serve users effectively.
+            </p>
+
+            <blockquote>
+                "The best applications are those that feel invisible to the user, working so smoothly that their technical complexity goes unnoticed."
+            </blockquote>
+
+            <h2>Key Technologies Driving Innovation</h2>
+            <p>
+                Let's explore some essential technologies that power modern web applications:
+            </p>
+            <ul>
+                <li>React and Virtual DOM</li>
+                <li>GraphQL for efficient data fetching</li>
+                <li>WebAssembly for high-performance computing</li>
+                <li>Service Workers for offline capabilities</li>
+            </ul>
+
+            <h2>Code Implementation Example</h2>
+            <p>
+                Here's a simple example of a modern React component using hooks:
+            </p>
+            <pre><code>
+const WebApp = () => {
+    const [data, setData] = useState(null);
+    
+    useEffect(() => {
+        fetchData().then(setData);
+    }, []);
+
+    return data ? &lt;Dashboard data={data} /&gt; : &lt;Loading /&gt;;
+}
+            </code></pre>
+
+            <h2>Performance Considerations</h2>
+            <p>
+                Performance isn't just about speed—it's about perception. Users perceive performance through metrics like First Contentful Paint (FCP), Time to Interactive (TTI), and Cumulative Layout Shift (CLS).
+            </p>
+
+            <div class="article-footer">
+                <div class="topics">
+                    <span class="topic-tag">Web Development</span>
+                    <span class="topic-tag">JavaScript</span>
+                    <span class="topic-tag">Programming</span>
+                </div>
+            </div>
+
+            <div class="related-articles">
+                <h3 class="related-title">More from John Doe</h3>
+                <ul>
+                    <li>Understanding React's Virtual DOM</li>
+                    <li>The Future of Web Performance</li>
+                    <li>Building Scalable Applications</li>
+                </ul>
+            </div>
+        </article>
+    </div>
+</body>
+</html>

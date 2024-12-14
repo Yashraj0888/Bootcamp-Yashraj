@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Homepage Design</title>
+    <link rel="stylesheet" href="solution2-1.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <img src="https://cdn.svgporn.com/logos/medium.svg" alt="Logo" class="logo">
+            <div class="nav-links">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#articles" class="nav-link">Articles</a>
+                <a href="#about" class="nav-link">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>The Art of Building Modern Web Applications</h1>
+            <p class="hero-subtitle">Explore the latest in web development and design</p>
+            <a href="#articles" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <section class="featured-articles" id="articles">
+        <h2 class="section-title">Featured Articles</h2>
+        <div class="article-grid">
+            <article class="article-card">
+                <a href="../ex-5/solution1-2.html">
+                    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6" alt="Web Development">
+                    <div class="article-content">
+                        <h3>Modern Web Development</h3>
+                        <p>Understanding fundamental principles and cutting-edge technologies</p>
+                        <div class="author-info">
+                            <img src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c" alt="John Doe" class="author-avatar">
+                            
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section" id="about">
+                <h4>About Us</h4>
+                <p>Leading the way in modern web development education and resources.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#articles">Articles</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <div class="social-links">
+                    <a href="https://twitter.com" target="_blank">Twitter</a>
+                    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                    <a href="https://github.com" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Article card click handler
+        document.querySelectorAll('.article-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                const link = this.querySelector('a').getAttribute('href');
+                window.location.href = link;
+            });
+        });
+    </script>
+</body>
+</html>
