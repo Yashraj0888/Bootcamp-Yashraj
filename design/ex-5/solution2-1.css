@@ -2,7 +2,7 @@
     --medium-bg-white: #FFFFFF;
     --medium-text-black: #141414;
     --medium-text-gray: #6B6B6B;
-    --medium-green: #1A8917;
+    --medium-green: #175989;
     --medium-border-gray: #F0F0F0;
     --medium-light-gray: #F9F9F9;
 }
@@ -105,7 +105,7 @@ body {
 }
 
 .cta-button:hover {
-    background-color: #155E14;
+    background-color: #3b6291;
 }
 
 /* Featured Articles */
