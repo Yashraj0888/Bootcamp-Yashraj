@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Railways - Book Your Journey</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="solution3-1.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="logo">
+            <i class="fas fa-train"></i>
+            Indian Railways
+        </a>
+        <div class="nav-links">
+            <a href="#">Book Tickets</a>
+            <a href="#">PNR Status</a>
+            <a href="#">Train Schedule</a>
+            <a href="#">My Bookings</a>
+            
+            <button class="nav-btn login">Login</button>
+            <button class="nav-btn signup">Sign Up</button>
+
+
+        </div>
+    </nav>
+<div class="hero-section">
+    <img src="https://static.toiimg.com/photo/msid-92440904,width-96,height-65.cms" alt="Indian Railway">
+    <div class="hero-overlay">
+        <h1>Experience India by Rail</h1>
+        <p>Journey through the heart of incredible India</p>
+    </div>
+</div>
+    <div class="main-container">
+    
+        <form class="search-form">
+            <h2 class="form-title">Find Your Perfect Journey</h2>
+            <div class="form-grid">
+                <div class="input-group">
+                    
+                        <label>From Station</label>
+                    <div class="inner-container">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <input type="text" placeholder="Enter departure station">
+                    </div>
+                    
+                </div>
+                <div class="input-group">
+                    
+                <label>To Station</label>
+                    <div class="inner-container">
+                        <i class="fas fa-map-marker"></i>
+                        <input type="text" placeholder="Enter arrival station">
+                    </div>
+                    
+                </div>
+                <div class="input-group">
+                    
+                    <label>Travel Date</label>
+                    <div class="inner-container">
+                        <i class="far fa-calendar"></i>
+                        <input type="date">
+                    </div>
+                    
+                </div>
+                <div class="input-group">
+                    
+                        <label>Class</label>
+                    <div class="inner-container">
+                        <i class="fas fa-chair"></i>
+                        <select>
+                            <option value="">Select class</option>
+                            <option value="1A">AC First Class (1A)</option>
+                            <option value="2A">AC 2 Tier (2A)</option>
+                            <option value="3A">AC 3 Tier (3A)</option>
+                            <option value="SL">Sleeper Class (SL)</option>
+                        </select>
+                    </div>
+                    
+                </div>
+            </div>
+            <button type="submit" class="search-btn">Search Trains</button>
+        </form>
+    </div>
+
+   <!-- Popular Routes Section -->
+   <section class="routes-section">
+    <div class="container">
+        <h2 class="section-heading">Popular Train Routes</h2>
+        <div class="routes-grid">
+            <div class="route-card">
+                <div class="route-info">
+                    <div class="cities">
+                        <span>Delhi</span>
+                        <i class="fas fa-arrow-right"></i>
+                        <span>Mumbai</span>
+                    </div>
+                    <div class="train-details">
+                        <h3>Rajdhani Express</h3>
+                        <p>Duration: 16h 35m</p>
+                        <span class="price">From ₹3,145</span>
+                    </div>
+                </div>
+            </div>
+            <div class="route-card">
+                <div class="route-info">
+                    <div class="cities">
+                        <span>Patna</span>
+                        <i class="fas fa-arrow-right"></i>
+                        <span>SMVT Banglore</span>
+                    </div>
+                    <div class="train-details">
+                        <h3>Hamsafar Express</h3>
+                        <p>Duration: 48h 35m</p>
+                        <span class="price">From ₹2,671</span>
+                    </div>
+                </div>
+            </div>
+            <div class="route-card">
+                <div class="route-info">
+                    <div class="cities">
+                        <span>Varanasi</span>
+                        <i class="fas fa-arrow-right"></i>
+                        <span>Dhnabad</span>
+                    </div>
+                    <div class="train-details">
+                        <h3>Ganga-Satluj Express</h3>
+                        <p>Duration: 16h 35m</p>
+                        <span class="price">From ₹1,500</span>
+                    </div>
+                </div>
+            </div>
+            <!-- More route cards -->
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="services-section">
+    <div class="container">
+        <h2 class="section-heading">Why Choose Us</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-ticket-alt"></i>
+                <h3>Instant Booking</h3>
+                <p>Book your tickets instantly with our seamless booking system</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-clock"></i>
+                <h3>24/7 Support</h3>
+                <p>Round the clock customer support for all your queries</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Secure Payments</h3>
+                <p>100% secure payment gateway for safe transactions</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Travel Tips Section -->
+<section class="tips-section">
+    <div class="container">
+        <h2 class="section-heading">Travel Tips & Updates</h2>
+        <div class="tips-grid">
+            <article class="tip-card">
+                <img src="https://www.newdelhiairport.in/media/2265/tips-for-air-travel-packing.jpg" alt="Travel Tips">
+                <div class="tip-content">
+                    <h3>Essential Travel Tips</h3>
+                    <p>Make your train journey comfortable with these tips</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+
+    
+<section class="destinations-section">
+    <div class="section-title">
+        <h2>Popular Destinations</h2>
+        <div class="carousel-controls">
+            <button class="carousel-control prev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-control next">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+ 
+    <div class="destinations-wrapper">
+        <div class="destinations-grid">
+            <div class="destination-card">
+                <img src="https://img.freepik.com/premium-photo/photo-taj-mahal-agra-india-background_1115474-3535.jpg" alt="Taj Mahal">
+                <div class="destination-overlay">
+                    <h3 class="destination-title">Taj Mahal, Agra</h3>
+                    <p class="destination-desc">Experience the wonder of the world</p>
+                    <div class="destination-price">Starting from ₹999</div>
+                </div>
+            </div>
+            <div class="destination-card">
+                <img src="https://images.unsplash.com/photo-1627894483216-2138af692e32" alt="Varanasi">
+                <div class="destination-overlay">
+                    <h3 class="destination-title">Varanasi Ghats</h3>
+                    <p class="destination-desc">Spiritual journey along the Ganges</p>
+                    <div class="destination-price">Starting from ₹799</div>
+                </div>
+            </div>
+            <div class="destination-card">
+                <img src="https://m.economictimes.com/thumb/msid-70104165,width-1200,height-900,resizemode-4,imgsize-1445127/jaipur_gettyimages.jpg" alt="Jaipur">
+                <div class="destination-overlay">
+                    <h3 class="destination-title">Pink City, Jaipur</h3>
+                    <p class="destination-desc">Royal heritage of Rajasthan</p>
+                    <div class="destination-price">Starting from ₹1299</div>
+                </div>
+            </div>
+            <div class="destination-card">
+                <img src="https://www.tripsavvy.com/thmb/UoylMLyzOBPdDp34ForEiJd9m3s=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-522478216-5ab12c4e3de4230036949cee.jpg" alt="Kerala">
+                <div class="destination-overlay">
+                    <h3 class="destination-title">Kerala Backwaters</h3>
+                    <p class="destination-desc">God's own country</p>
+                    <div class="destination-price">Starting from ₹1499</div>
+                </div>
+            </div>
+            <div class="destination-card">
+                <img src="https://clubmahindra.gumlet.io/blog/media/section_images/darjeeling-41668ae3184ae13.jpg?w=376&dpr=2.6" alt="Darje">
+                <div class="destination-overlay">
+                        <h3 class="destination-title">Darjeeling</h3>
+                        <p class="destination-desc">Tea gardens and mountain views</p>
+                        <div class="destination-price">Starting from ₹1199</div>
+                    </div>
+                </div>
+            
+                <div class="destination-card">
+                    <img src="https://shiimperial.s3-ap-south-1.amazonaws.com/blog_image/1704778932089images.jpeg" alt="Goa">
+                    <div class="destination-overlay">
+                        <h3 class="destination-title">Goa Beaches</h3>
+                        <p class="destination-desc">Sun, sand and serenity</p>
+                        <div class="destination-price">Starting from ₹899</div>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="https://i.redd.it/ikg888gfdv331.jpg" alt="Mysore"><div class="destination-overlay">
+                        <h3 class="destination-title">Mysore Palace</h3>
+                        <p class="destination-desc">Royal grandeur of South</p>
+                        <div class="destination-price">Starting from ₹699</div>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="https://media.istockphoto.com/id/137340137/photo/vittala-temple-stone-chariot-hampi-karnataka-india.jpg?s=612x612&w=0&k=20&c=HMFrtHk2QCPENR6bBncce0Xz46Lg49w-HSOrb5qyU2E=" alt="Hampi"><div class="destination-overlay">
+                        <h3 class="destination-title">Hampi Ruins</h3>
+                        <p class="destination-desc">Ancient architectural marvel</p>
+                        <div class="destination-price">Starting from ₹899</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script>
+        const wrapper = document.querySelector('.destinations-wrapper');
+        const prevBtn = document.querySelector('.prev');
+        const nextBtn = document.querySelector('.next');
+        
+        let scrollAmount = 0;
+        const cardWidth = 320; // card width + gap
+
+        nextBtn.addEventListener('click', () => {
+            scrollAmount = Math.min(scrollAmount + cardWidth, wrapper.scrollWidth - wrapper.clientWidth);
+            wrapper.scrollTo({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        });
+
+        prevBtn.addEventListener('click', () => {
+            scrollAmount = Math.max(scrollAmount - cardWidth, 0);
+            wrapper.scrollTo({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
