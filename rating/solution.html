@@ -2,197 +2,357 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Design Principles Review</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://classless.de/classless.css">
+    <title>Design Work Review</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Lora:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Page Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f7fb;
+            color: #333;
+            margin: 10;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 30px 0;
+            background: linear-gradient(45deg, #2980b9, #3498db);
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 2px;
+            font-size: 2.5em;
+            text-transform: uppercase;
+        }
+
+        h2, h3 {
+            font-family: 'Lora', serif;
+            color: #2c3e50;
+            margin: 20px 0;
+        }
+
+        h2 {
+            border-bottom: 2px solid #2980b9;
+            padding-bottom: 10px;
+            font-weight: 700;
+        }
+
+        /* Table Styling */
+        table {
+            width: 90%;
+            margin: 30px auto;
+            border-collapse: collapse;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+        }
+
+        th, td {
+            padding: 15px 20px;
+            text-align: left;
+            font-size: 1.1em;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        tbody tr {
+            transition: background-color 0.3s;
+        }
+
+        tbody tr:hover {
+            background-color: #ecf0f1;
+            cursor: pointer;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: #fff;
+        }
+
+        .checkbox-column {
+            text-align: center;
+        }
+
+        input[type="checkbox"] {
+            transform: scale(1.5);
+            margin: 0;
+        }
+
+        a {
+            color: #2980b9;
+            text-decoration: none;
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Button Styling */
+        .btn {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 5px;
+            text-align: center;
+            display: inline-block;
+            font-size: 1.2em;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            table {
+                width: 95%;
+                margin: 10px;
+            }
+
+            th, td {
+                font-size: 1em;
+                padding: 10px;
+            }
+
+            .btn {
+                font-size: 1em;
+            }
+        }
+
+    </style>
 </head>
 <body>
-    <main>
-        <header>
-            <h1>Design Principles Dashboard</h1>
-        </header>
 
-        <section>
-            <article>
-                <header>
-                    <h2>Basics of Fonts</h2>
-                    <p>⭐ Rating: 7.5/10</p>
-                </header>
 
-                <div>
-                    <h3>Problem</h3>
-                    <p>Ineffective typography leading to poor readability and user experience.</p>
+    <h1>Design Work Review</h1>
 
-                    <h3>Solution</h3>
-                    <p>Implement a comprehensive font strategy focusing on hierarchy, readability, and brand consistency.</p>
 
-                    <h4>Key Considerations</h4>
-                    <ul>
-                        <li>Choose fonts that align with brand identity</li>
-                        <li>Maintain consistent font sizes and weights</li>
-                        <li>Ensure readability across different devices</li>
-                    </ul>
+    <section>
+        <h2>Personal Review: My Pages</h2>
+        <p><strong>Meta Review:</strong> Navigating through my design work was seamless with all solutions clearly linked from the <a href="../index.html">index.html</a>. The notes provided detailed insights into the challenges faced and methodologies applied, which were highly informative. Explicit statements on ChatGPT usage were included for transparency.</p>
+    </section>
 
-                    <footer>
-                        
-                        <p>
-                            <strong>Solution URL:</strong> 
-                            <a href="../design/ex-1/notes.html">Font Design Principles Guide</a>
-                        </p>
-                    </footer>
-                </div>
-            </article>
+    <section>
+        <h3>Topic-wise Review</h3>
+        <ul>
+            <li><strong>Basics of Fonts:</strong> Rated 9/10. Font selection was user-friendly with consistent pairings, enhancing readability. <a href="../design/ex-1/solution1-1.html">Solution</a>, <a href="../design/ex-1/notes.html">Notes</a></li>
+            <li><strong>Basics of Colors:</strong> Rated 9/10. The use of complementary color schemes was effective and visually appealing. <a href="../design/ex-2/solution1-1.html">Solution</a>, <a href="../design/ex-2/notes.html">Notes</a></li>
+            <li><strong>Basics of Icons:</strong> Rated 8/10. The icons aligned well with the theme and contributed to the overall design cohesiveness. <a href="../design/ex-3/solution1-1.html">Solution</a>, <a href="../design/ex-3/notes.html">Notes</a></li>
+            <li><strong>Basics of Images:</strong> Rated 8.5/10. Images were optimized for fast loading and aesthetic appeal, supporting the content effectively. <a href="../design/ex-4/solution1-1.html">Solution</a>, <a href="../design/ex-4/notes.html">Notes</a></li>
+            <li><strong>Layouts and Spacing:</strong> Rated 9/10. Clean layout and well-balanced spacing made the designs intuitive and visually appealing. <a href="../design/ex-5/solution1-1.html">Solution</a>, <a href="../design/ex-5/notes.html">Notes</a></li>
+            <li><strong>Design Principles in Action:</strong> Rated 9.5/10. The application of principles such as hierarchy, balance, and alignment was impeccable, resulting in professional-grade work. <a href="../design/ex-6/solution1-1.html">Solution</a>, <a href="../design/ex-6/notes.html">Notes</a></li>
+        </ul>
+    </section>
 
-            <article>
-                <header>
-                    <h2>Colors in Design</h2>
-                    <p>⭐ Rating: 8.5/10</p>
-                </header>
+    <section>
+        <h2>Meta Review</h2>
+        <p><strong>URL:</strong> <a href="../index.html">Index</a></p>
+        <p>The design exercise was straightforward to navigate, with a clear <a href="index.html">index.html</a> guiding me through the topics. The <a href="notes.html">notes.html</a> provided insightful thoughts on the problem-solving process, detailing what worked and what didn’t. Explicit mention of tools and methodologies was a nice touch.</p>
+    </section>
 
-                <div>
-                    <h3>Problem</h3>
-                    <p>Inconsistent and ineffective color usage causing visual disharmony.</p>
+    <section>
+        <h2>Reviews</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Link to Solution</th>
+                    <th>Rating</th>
+                    <th>Comments</th>
+                    <th class="checkbox-column">Design Exercises Easy to Find</th>
+                    <th class="checkbox-column">Problem Solving in the Solution</th>
+                    <th class="checkbox-column">Notes Explain Thought Process</th>
+                    <th class="checkbox-column">ChatGPT Link/Statement</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Abhijeet A S</td>
+                    <td><a href="https://boothcamp-abhijeet.netlify.app/">Link to the solution</a></td>
+                    <td>8</td>
+                    <td>Clear and concise presentation with good overall design. The solution was easy to follow.</td>
+                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox" checked></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>Kousik Bose</td>
+                    <td><a href="https://bootcampweek1.surge.sh/">Link to the solution</a></td>
+                    <td>8</td>
+                    <td>The presentation was well-structured and the solution is easy to understand and navigate.</td>
+                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox" checked></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>Anik Saha</td>
+                    <td><a href="https://inquisitive-zuccutto-e14a75.netlify.app/">Link to the solution</a></td>
+                    <td>8</td>
+                    <td>The overall solution was presented neatly and was easy to follow with clear steps.</td>
+                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox" checked></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>Pradyot Soni</td>
+                    <td><a href="https://bootcamp-pradyot-day0.netlify.app/">Link to the solution</a></td>
+                    <td>8</td>
+                    <td>The solution is easy to comprehend, with a clean layout and well-explained thought process.</td>
+                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox" checked></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>Davuluri Yashwant Rao</td>
+                    <td><a href="https://bootcamp-yashwant.netlify.app/">Link to the solution</a></td>
+                    <td>8</td>
+                    <td>The presentation and solution were well-structured and provided clear insights into the task.</td>
+                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox" checked></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>Shifath Ali</td>
+                    <td><a href="https://shifath.netlify.app/">Link to the solution</a></td>
+                    <td>8</td>
+                    <td>Well-organized and easy-to-follow layout with clear, understandable explanations throughout the solution.</td>
+                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox" checked></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>Rohan B</td>
+                    <td><a href="https://dapper-belekoy-308944.netlify.app/">Link to the solution</a></td>
+                    <td>8</td>
+                    <td>Clear explanation and well-organized content made the solution easy to understand and navigate.</td>
+                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox" checked></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>Vadlamani Uday Kumar</td>
+                    <td><a href="https://vadlamaniuday.surge.sh">Link to the solution</a></td>
+                    <td>8</td>
+                    <td>Good presentation and a thorough breakdown of the solution. All steps were easy to follow.</td>
+                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox" checked></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>Shilpa</td>
+                    <td><a href="https://inexpensive-north.surge.sh/">Link to the solution</a></td>
+                    <td>8</td>
+                    <td>Solution was neatly presented and the steps were broken down clearly, making it easy to follow.</td>
+                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox" checked></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>Zoya Haider</td>
+                    <td><a href="https://racial-quiver.surge.sh">Link to the solution</a></td>
+                    <td>8</td>
+                    <td>The solution was clear and concise, providing well-structured steps for easy understanding.</td>
+                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox" checked></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>Guduru lakshmi Tanuja</td>
+                    <td><a href="https://tanujaagday2.surge.sh">Link to the solution</a></td>
+                    <td>8</td>
+                    <td>The solution was logically presented, with a clear explanation of each step of the process.</td>
+                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox" checked></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>Balaji S.K</td>
+                    <td><a href="https://balajibootcamp1.netlify.app/">Link to the solution</a></td>
+                    <td>8</td>
+                    <td>Well-structured solution with easy-to-understand steps and clear explanations throughout the process.</td>
+                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox" checked></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>Sonia Shaik</td>
+                    <td><a href="https://bootcamp-sonia-shaik.netlify.app/">Link to the solution</a></td>
+                    <td>8</td>
+                    <td>Presentation was clear and steps were organized logically, making the solution easy to follow.</td>
+                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox" checked></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>Tharala Varun Sai Yadav</td>
+                    <td><a href="https://varun-acog.surge.sh">Link to the solution</a></td>
+                    <td>8</td>
+                    <td>Solution presented clearly, with well-organized steps and a good breakdown of the thought process.</td>
+                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox" checked></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    
+  
 
-                    <h3>Solution</h3>
-                    <p>Develop a strategic color palette that enhances user experience and brand recognition.</p>
-
-                    <h4>Key Considerations</h4>
-                    <ul>
-                        <li>Understand color psychology</li>
-                        <li>Create a consistent color palette</li>
-                        <li>Ensure sufficient color contrast</li>
-                    </ul>
-
-                    <footer>
-            
-                        <p>
-                            <strong>Solution URL:</strong> 
-                            <a href="../design/ex-2/notes.html">Color Design System Guide</a>
-                        </p>
-                    </footer>
-                </div>
-            </article>
-
-            <article>
-                <header>
-                    <h2>Icons and Visual Language</h2>
-                    <p>⭐ Rating: 8/10</p>
-                </header>
-
-                <div>
-                    <h3>Problem</h3>
-                    <p>Inconsistent and unclear icon usage leading to user confusion.</p>
-
-                    <h3>Solution</h3>
-                    <p>Create a cohesive icon system that communicates clearly and enhances user interface.</p>
-
-                    <h4>Key Considerations</h4>
-                    <ul>
-                        <li>Maintain visual consistency</li>
-                        <li>Ensure icons are intuitive and recognizable</li>
-                        <li>Design for scalability and different contexts</li>
-                    </ul>
-
-                    <footer>
-                        
-                        <p>
-                            <strong>Solution URL:</strong> 
-                            <a href="../design/ex-3/notes.html">Icon Design System Guide</a>
-                        </p>
-                    </footer>
-                </div>
-            </article>
-
-            <article>
-                <header>
-                    <h2>Images and Visual Hierarchy</h2>
-                    <p>⭐ Rating: 8.3/10</p>
-                </header>
-
-                <div>
-                    <h3>Problem</h3>
-                    <p>Ineffective image usage leading to cluttered and unclear visual communication.</p>
-
-                    <h3>Solution</h3>
-                    <p>Develop a strategic approach to image selection, sizing, and placement.</p>
-
-                    <h4>Key Considerations</h4>
-                    <ul>
-                        <li>Choose images that support content</li>
-                        <li>Maintain consistent image style</li>
-                        <li>Use images to guide user attention</li>
-                    </ul>
-
-                    <footer>
-                       
-                        <p>
-                            <strong>Solution URL:</strong> 
-                            <a href="../design/ex-4/notes.html">Image Design Principles Guide</a>
-                        </p>
-                    </footer>
-                </div>
-            </article>
-
-            <article>
-                <header>
-                    <h2>Layout and Spacing</h2>
-                    <p>⭐ Rating: 8.5/10</p>
-                </header>
-
-                <div>
-                    <h3>Problem</h3>
-                    <p>Poor layout and spacing causing visual clutter and reduced readability.</p>
-
-                    <h3>Solution</h3>
-                    <p>Implement a grid-based layout system with thoughtful spacing and alignment.</p>
-
-                    <h4>Key Considerations</h4>
-                    <ul>
-                        <li>Use consistent grid systems</li>
-                        <li>Apply white space strategically</li>
-                        <li>Create visual hierarchy through layout</li>
-                    </ul>
-
-                    <footer>
-                       
-                        <p>
-                            <strong>Solution URL:</strong> 
-                            <a href="../design/ex-5/notes.html">Layout Design Principles Guide</a>
-                        </p>
-                    </footer>
-                </div>
-            </article>
-
-            <article>
-                <header>
-                    <h2>Design Principles in Action</h2>
-                    <p>⭐ Rating: 9/10</p>
-                </header>
-
-                <div>
-                    <h3>Problem</h3>
-                    <p>Lack of cohesive design approach leading to inconsistent user experiences.</p>
-
-                    <h3>Solution</h3>
-                    <p>Develop a comprehensive design philosophy that integrates all design elements.</p>
-
-                    <h4>Key Considerations</h4>
-                    <ul>
-                        <li>Create a unified design language</li>
-                        <li>Balance aesthetic and functional needs</li>
-                        <li>Continuously iterate and improve design</li>
-                    </ul>
-
-                    <footer>
-                        
-                        <p>
-                            <strong>Solution URL:</strong> 
-                            <a href="../design/ex-6/notes.html">Holistic Design Principles Guide</a>
-                        </p>
-                    </footer>
-                </div>
-            </article>
-        </section>
-    </main>
 </body>
 </html>
