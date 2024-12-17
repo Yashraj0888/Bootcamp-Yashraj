@@ -1,0 +1,14 @@
+{
+    "logging_level": "debug",
+    "additional_functions": [
+      {
+        "function_name": "sin",
+        "file": "./functions/additionalFunctions.js"
+      },
+      {
+        "function_name": "cos",
+        "file": "./functions/additionalFunctions.js"
+      }
+    ]
+  }
+  

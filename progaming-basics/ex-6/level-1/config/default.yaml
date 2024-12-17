@@ -1,0 +1,9 @@
+# config/default.yaml
+app:
+  name: "level-1"
+  version: "1.0.0"
+database:
+  host: "localhost"
+  port: 5432
+  user: "admin"
+  password: "secret"
