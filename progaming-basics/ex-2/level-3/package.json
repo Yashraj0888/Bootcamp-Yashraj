@@ -1,0 +1,14 @@
+{
+  "name": "level-3",
+  "version": "1.0.0",
+  "description": "A simple CLI for math operations",
+  "main": "index.js",
+  "bin": {
+    "math-commands": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
