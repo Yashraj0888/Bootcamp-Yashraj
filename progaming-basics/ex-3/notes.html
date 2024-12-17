@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 3: Using Logging (Winston) - Thought Process</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f9;
+        }
+        header {
+            background: #343a40;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #343a40;
+        }
+        p, ul {
+            margin-bottom: 1rem;
+        }
+        ul {
+            padding-left: 1.5rem;
+        }
+        .code {
+            background: #f0f0f0;
+            padding: 1rem;
+            border-radius: 6px;
+            border-left: 5px solid #000000;
+            font-family: 'Courier New', Courier, monospace;
+            color: #555;
+            overflow-x: auto;
+        }
+        code{
+            background: #dddbdb;
+            padding: 2px;
+            border-radius: 2px;           
+            font-family: 'Courier New', Courier, monospace;
+            color: #333;
+            overflow-x: auto;
+            font-size: 0.95rem;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #343a40;
+            color: #fff;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>Exercise 3: Using Logging (Winston) - Thought Process</header>
+    <div class="container">
+        <h2>Objective</h2>
+        <p>The objective is to implement structured logging in a Node.js program using the <code>winston</code> library. The solution is divided into two levels, focusing on console logging and file transport with enhanced formatting.</p>
+
+        <h2>Level 1: Basic Logging Setup</h2>
+        <p><strong>Approach:</strong></p>
+        <ul>
+            <li>Start by installing <code>winston</code> using <code>npm install winston</code>.</li>
+            <li>Create a logger instance with separate log levels: <code>info</code>, <code>warn</code>, and <code>error</code>.</li>
+            <li>Log essential program events like "Program started" (info level) and "Operation successful" (info level).</li>
+            <li>Add additional functions such as <code>divide</code>. For the division function, log division by zero as a <code>fatal</code> error.</li>
+        </ul>
+        <p><strong>Testing:</strong></p>
+        <ul>
+            <li>Run the program and verify logs appear in the console with appropriate levels and messages.</li>
+            <li>Ensure errors like division by zero are logged with severity.</li>
+        </ul>
+
+        <h2>Level 2: File Logging with Timestamps</h2>
+        <p><strong>Approach:</strong></p>
+        <ul>
+            <li>Enhance the logger by adding a file transport to log messages into a file (e.g., <code>app.log</code>).</li>
+            <li>Customize the log format to include timestamps for each log entry. Use <code>winston.format.combine</code> with <code>timestamp</code> and <code>printf</code> for a readable format.</li>
+        </ul>
+        <p><strong>Testing:</strong></p>
+        <ul>
+            <li>Run the program and confirm that logs are written to the specified file.</li>
+            <li>Check the file to ensure each log entry includes a timestamp and is formatted clearly.</li>
+        </ul>
+
+        <h2>Conclusion</h2>
+        <p>By dividing the implementation into levels, the solution ensures a smooth transition from basic logging to advanced file transport with formatting. This approach makes the program's logging robust and suitable for debugging and monitoring.</p>
+
+        <div class="code">
+            Example logger configuration:
+            <pre>{
+  "dependencies": {
+    "winston": "^3.8.2"
+  },
+  "scripts": {
+    "start": "node app.js"
+  }
+}</pre>
+        </div>
+    </div>
+    <footer>&copy; 2024 - Logging with Winston Guide</footer>
+</body>
+</html>

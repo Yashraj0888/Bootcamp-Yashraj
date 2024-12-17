@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 6: YAML Configuration - Thought Process</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #373737;
+        
+        }
+        h1, h2 {
+            color: #545252;
+        }
+        header {
+            background: #7a807abc;
+            color: #0a0a0a;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        section {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 800px;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        
+        pre {
+            background: #f4f4f4;
+            border-left: 5px solid #4c4d4c;
+            padding: 10px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: "Courier New", Courier, monospace;
+            color: #505350;
+        }
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        .code {
+            background: #f0f0f0;
+            padding: 1rem;
+            border-radius: 6px;
+            border-left: 5px solid #000000;
+            font-family: 'Courier New', Courier, monospace;
+            color: #555;
+            overflow-x: auto;
+        }
+        code{
+            background: #dddbdb;
+            padding: 2px;
+            border-radius: 2px;           
+            font-family: 'Courier New', Courier, monospace;
+            color: #333;
+            overflow-x: auto;
+            font-size: 0.95rem;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exercise 6: YAML Configuration</h1>
+        <p>Thought Process for Implementation</p>
+    </header>
+    <section>
+        <h2>Objective</h2>
+        <p>Use the <code>config</code> library to manage YAML-based configurations efficiently, ensuring flexibility and scalability in program behavior.</p>
+
+        <h2>Approach</h2>
+
+        <h3>Level 1: Loading Basic YAML Configuration</h3>
+        <ol>
+            <li>Install the <code>config</code> library using npm:</li>
+            <pre><code>npm install config</code></pre>
+            <li>Create a <code>default.yaml</code> file to define the base configuration:</li>
+            <pre><code>port: 3000
+logging: 
+  level: "info"
+db:
+  host: "localhost"
+  name: "myapp"</code></pre>
+            <li>Load the configuration in the program:</li>
+            <pre><code>const config = require('config');
+
+const port = config.get('port');
+const dbHost = config.get('db.host');
+
+console.log(`Server running on port ${port}`);
+console.log(`Database hosted at ${dbHost}`);</code></pre>
+            <li>Validate that the program correctly reads values from the YAML file.</li>
+        </ol>
+
+        <h3>Level 2: Supporting Multiple Environments</h3>
+        <ol>
+            <li>Create additional YAML configuration files for different environments, e.g., <code>development.yaml</code> and <code>production.yaml</code>:</li>
+            <pre><code># development.yaml
+logging:
+  level: "debug"
+db:
+  host: "localhost"
+  name: "dev_db"</code></pre>
+            <pre><code># production.yaml
+logging:
+  level: "error"
+db:
+  host: "prod-db-server"
+  name: "prod_db"</code></pre>
+            <li>Use the <code>NODE_ENV</code> environment variable to load the appropriate configuration:</li>
+            <pre><code>NODE_ENV=production node app.js</code></pre>
+            <li>Modify the program to load configurations dynamically based on the environment:</li>
+            <pre><code>const env = process.env.NODE_ENV || 'development';
+console.log(`Running in ${env} mode`);
+const dbName = config.get('db.name');
+console.log(`Using database: ${dbName}`);</code></pre>
+        </ol>
+
+        <h3>Level 3: Dynamic Program Behavior and Extensibility</h3>
+        <ol>
+            <li>Enhance the YAML file to include configurable commands and function paths:</li>
+            <pre><code># default.yaml
+commands:
+  sin: "./math/sin.js"
+  cos: "./math/cos.js"</code></pre>
+            <li>Write dynamic code to load these modules:</li>
+            <pre><code>const commands = config.get('commands');
+for (const [command, path] of Object.entries(commands)) {
+    const func = require(path);
+    console.log(`Loaded command: ${command}`);
+}</code></pre>
+            <li>Demonstrate dynamic behavior adjustment using configurations:</li>
+            <pre><code>const loggingLevel = config.get('logging.level');
+if (loggingLevel === 'debug') {
+    console.log('Debugging mode enabled');
+}</code></pre>
+            <li>Ensure that new functionality can be added by updating only the configuration file, not the program code.</li>
+        </ol>
+
+        <h2>Key Benefits of This Approach</h2>
+        <ul>
+            <li>Separation of configuration from code for better maintainability.</li>
+            <li>Easy environment-specific customization.</li>
+            <li>Enhanced flexibility and extensibility of the program.</li>
+        </ul>
+    </section>
+    <footer>
+        <p>&copy; 2024 Professional Thought Process Documentation</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Command-Line Program - Thought Process</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f9;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        p, ul {
+            margin-bottom: 1rem;
+        }
+        ul {
+            padding-left: 1.5rem;
+        }
+        .code {
+            background: #f0f0f0;
+            padding: 1rem;
+            border-radius: 6px;
+            border-left: 5px solid #000000;
+            font-family: 'Courier New', Courier, monospace;
+            color: #555;
+            overflow-x: auto;
+        }
+        code{
+            background: #dddbdb;
+            padding: 2px;
+            border-radius: 2px;           
+            font-family: 'Courier New', Courier, monospace;
+            color: #333;
+            overflow-x: auto;
+            font-size: 0.95rem;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #333;
+            color: #fff;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>Command-Line Program - Thought Process</header>
+    <div class="container">
+        <h2>Objective</h2>
+        <p>Write a Node.js program to accept and process command-line arguments, performing calculations and handling user inputs effectively. The solution is divided into three levels of increasing complexity.</p>
+
+        <h2>Level 1: Basic Sum Calculation</h2>
+        <p><strong>Approach:</strong></p>
+        <ul>
+            <li>Create a script using Node.js that accepts numbers as command-line arguments.</li>
+            <li>Use <code>process.argv</code> to parse the arguments, ensuring the program can read inputs from the command line.</li>
+            <li>Implement error handling to check if the inputs are valid numbers. Display meaningful error messages if invalid inputs are provided.</li>
+        </ul>
+        <p><strong>Testing:</strong></p>
+        <ul>
+            <li>Run the script with valid numeric inputs and confirm the sum is correct.</li>
+            <li>Run the script with non-numeric inputs to ensure error handling is triggered.</li>
+        </ul>
+
+        <h2>Level 2: Adding Multiplication Support</h2>
+        <p><strong>Approach:</strong></p>
+        <ul>
+            <li>Enhance the script to support a <code>--multiply</code> flag. This flag modifies the operation to perform multiplication instead of addition.</li>
+            <li>Update the script to include a help text that provides usage instructions. Ensure clarity for the users.</li>
+        </ul>
+        <p><strong>Testing:</strong></p>
+        <ul>
+            <li>Test the <code>--multiply</code> flag with numeric inputs to confirm it calculates the product correctly.</li>
+            <li>Verify the help text displays usage instructions appropriately.</li>
+        </ul>
+
+        <h2>Level 3: Modularization and Global Command</h2>
+        <p><strong>Approach:</strong></p>
+        <ul>
+            <li>Create a new file, <code>mathutils.js</code>, to define the <code>add</code> and <code>multiply</code> functions. This ensures modularity and reusability of the code.</li>
+            <li>Refactor the main script to take the operation (e.g., <code>add</code> or <code>multiply</code>) as the first argument, followed by the operands.</li>
+            <li>Use the <code>bin</code> field in <code>package.json</code> to make the script executable as a global command. Utilize <code>npm link</code> to test this functionality.</li>
+        </ul>
+        <p><strong>Testing:</strong></p>
+        <ul>
+            <li>Run the program using the global command and validate the calculations for both addition and multiplication operations.</li>
+            <li>Test the modularized functions by importing them into another script.</li>
+        </ul>
+
+        <h2>Conclusion</h2>
+        <p>The exercise is completed by building the script in incremental levels. Each step ensures clarity, functionality, and maintainability, while testing validates the program's robustness at every stage.</p>
+
+        <div class="code">
+            Example modularized function in <code>mathutils.js</code>:
+            <pre>{
+  "add": (a, b) => a + b,
+  "multiply": (a, b) => a * b
+}</pre>
+        </div>
+    </div>
+    <footer>&copy; 2024 - Command-Line Program Guide</footer>
+</body>
+</html>

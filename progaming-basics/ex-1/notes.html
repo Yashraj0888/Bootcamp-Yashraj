@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setting Up npm - Thought Process</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #2c2c2c;
+            background-color: #f9f9f9;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1.5rem 0;
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 850px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #444;
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+        }
+        p {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        ul {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+            font-size: 1rem;
+        }
+        ul li {
+            margin-bottom: 0.75rem;
+        }
+        .code {
+            background: #f4f4f4;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 5px solid #000000;
+            font-family: 'Courier New', Courier, monospace;
+            color: #333;
+            overflow-x: auto;
+            font-size: 0.95rem;
+        }
+        code{
+            background: #dddbdb;
+            padding: 2px;
+            border-radius: 2px;           
+            font-family: 'Courier New', Courier, monospace;
+            color: #333;
+            overflow-x: auto;
+            font-size: 0.95rem;
+        }
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: #333;
+            color: #fff;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>Setting Up npm - Thought Process</header>
+    <div class="container">
+        <h2>Objective</h2>
+        <p>The objective is to configure and utilize npm for managing scripts, dependencies, and modules effectively. The solution is broken into three levels, each building upon the previous.</p>
+
+        <h2>Level 1: Basic Setup</h2>
+        <p><strong>Approach:</strong></p>
+        <ul>
+            <li>Initialize the Node.js project using <code>npm init</code>, creating a <code>package.json</code> file for managing project configurations.</li>
+            <li>Add a <code>start</code> script to run the <code>index.js</code> file, enabling easy execution with <code>npm start</code>.</li>
+            <li>Include a <code>dev</code> script that uses <code>DEBUG=* node index.js</code> to enable detailed debugging outputs.</li>
+        </ul>
+        <p><strong>Testing:</strong></p>
+        <ul>
+            <li>Run <code>npm start</code> to ensure the basic program executes correctly.</li>
+            <li>Run <code>npm run dev</code> to verify debugging information is displayed as expected.</li>
+        </ul>
+
+        <h2>Level 2: Enhancing Functionality</h2>
+        <p><strong>Approach:</strong></p>
+        <ul>
+            <li>Install the <code>chalk</code> package and utilize it in <code>index.js</code> to style console outputs, improving clarity and readability.</li>
+            <li>Add <code>nodemon</code> as a development dependency to monitor and restart the application automatically during development.</li>
+        </ul>
+        <p><strong>Testing:</strong></p>
+        <ul>
+            <li>Run the program and check for styled console output using <code>chalk</code>.</li>
+            <li>Modify <code>index.js</code> and confirm that <code>nodemon</code> automatically restarts the program.</li>
+        </ul>
+
+        <h2>Level 3: Prestart Validation</h2>
+        <p><strong>Approach:</strong></p>
+        <ul>
+            <li>Define a <code>prestart</code> script in <code>package.json</code> to check if <code>node_modules</code> exists before starting the application.</li>
+            <li>In case <code>node_modules</code> is missing, include a command to reinstall dependencies using <code>npm install</code> during the <code>prestart</code> phase.</li>
+        </ul>
+        <p><strong>Testing:</strong></p>
+        <ul>
+            <li>Delete the <code>node_modules</code> folder and execute <code>npm start</code>. Confirm that dependencies are reinstalled and the program starts seamlessly.</li>
+        </ul>
+
+        <h2>Conclusion</h2>
+        <p>Following a structured, incremental approach ensures a robust npm setup. Each level builds upon the previous one, with testing at every step to validate the configurations and functionality. This process ensures a reliable development workflow.</p>
+
+        <div class="code">
+            Example prestart script in <code>package.json</code>:
+            <pre>{
+  "scripts": {
+    "prestart": "if [ ! -d \"node_modules\" ]; then npm install; fi",
+    "start": "node index.js",
+    "dev": "DEBUG=* nodemon index.js"
+  }
+}</pre>
+        </div>
+    </div>
+    <footer>&copy; 2024 - npm Setup Guide</footer>
+</body>
+</html>

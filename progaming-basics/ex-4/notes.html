@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 4: Debugging with Debug Package</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f9;
+        }
+        header {
+            background: #212121;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #212121;
+        }
+        p, ul {
+            margin-bottom: 1rem;
+        }
+        ul {
+            padding-left: 1.5rem;
+        }
+        .code {
+            background: #f0f0f0;
+            padding: 1rem;
+            border-radius: 6px;
+            border-left: 5px solid #000000;
+            font-family: 'Courier New', Courier, monospace;
+            color: #555;
+            overflow-x: auto;
+        }
+        code{
+            background: #dddbdb;
+            padding: 2px;
+            border-radius: 2px;           
+            font-family: 'Courier New', Courier, monospace;
+            color: #333;
+            overflow-x: auto;
+            font-size: 0.95rem;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #212121;
+            color: #fff;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>Exercise 4: Debugging with Debug Package</header>
+    <div class="container">
+        <h2>Objective</h2>
+        <p>Utilize the <code>debug</code> package for selective debugging in multi-module programs and combine it with structured logging using <code>winston</code>.</p>
+
+        <h2>Level 1: Single Module Debugging</h2>
+        <p><strong>Approach:</strong></p>
+        <ul>
+            <li>Install the <code>debug</code> package using <code>npm install debug</code>.</li>
+            <li>Set up a namespace for debugging within a single module. For example, use <code>debug('app:module1')</code>.</li>
+            <li>Use the debug function to log messages within the module.</li>
+        </ul>
+        <p><strong>Testing:</strong></p>
+        <ul>
+            <li>Run the program with <code>DEBUG=app:module1 node app.js</code> to view debug messages.</li>
+            <li>Verify that debug messages only appear when the environment variable is set.</li>
+        </ul>
+
+        <h2>Level 2: Multi-Module Debugging</h2>
+        <p><strong>Approach:</strong></p>
+        <ul>
+            <li>Extend the program by creating multiple modules, each with its own debug namespace (e.g., <code>app:module1</code>, <code>app:module2</code>).</li>
+            <li>Ensure each module uses <code>debug</code> to log its specific messages.</li>
+            <li>Use the DEBUG environment variable to selectively enable debugging for specific modules.</li>
+        </ul>
+        <p><strong>Testing:</strong></p>
+        <ul>
+            <li>Enable debugging for specific modules by setting the DEBUG variable (e.g., <code>DEBUG=app:module1,app:module2</code>).</li>
+            <li>Confirm that only selected module debug messages appear in the output.</li>
+        </ul>
+
+        <h2>Level 3: Combining Debug and Winston</h2>
+        <p><strong>Approach:</strong></p>
+        <ul>
+            <li>Integrate <code>winston</code> for structured logging alongside <code>debug</code>. Install it using <code>npm install winston</code>.</li>
+            <li>Refactor the program to use <code>winston</code> for persistent logs and <code>debug</code> for transient debugging.</li>
+            <li>Enhance the compute program by making it interactive (e.g., using <code>readline</code> to accept user input).</li>
+        </ul>
+        <p><strong>Testing:</strong></p>
+        <ul>
+            <li>Run the program with <code>DEBUG</code> enabled and verify both transient debug logs and persistent <code>winston</code> logs.</li>
+            <li>Test the interactivity of the program and ensure logs provide meaningful insights.</li>
+        </ul>
+
+        <h2>Conclusion</h2>
+        <p>By integrating <code>debug</code> and <code>winston</code>, this approach enables efficient selective debugging while maintaining structured logging. Modularization ensures scalability and better code organization.</p>
+
+        <div class="code">
+            Example debug setup in a module:
+            <pre>const debug = require('debug')('app:module1');
+const logger = require('winston');
+
+// Debug example
+debug('Debugging started in module1');
+
+// Winston logging example
+logger.info('Structured log: Module1 operation successful');</pre>
+        </div>
+    </div>
+    <footer>&copy; 2024 - Debugging with Debug Package</footer>
+</body>
+</html>
