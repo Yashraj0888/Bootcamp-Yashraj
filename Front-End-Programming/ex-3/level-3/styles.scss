@@ -1,0 +1,14 @@
+@mixin margin($n) {
+    margin: $n * 2px;
+  }
+  
+  @mixin generate-margins() {
+    @for $i from 1 through 8 {
+      .m-#{$i} {
+        @include margin($i);
+      }
+    }
+  }
+  
+  @include generate-margins();
+  

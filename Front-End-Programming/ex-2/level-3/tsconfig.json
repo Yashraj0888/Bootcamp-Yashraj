@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+      "target": "es6",                         // Target ECMAScript 6
+      "module": "commonjs",                    // Use CommonJS for module system
+      "strict": true,                          // Enable strict type checking
+      "esModuleInterop": true,                 // Ensure compatibility with commonjs modules
+      "skipLibCheck": true,                    // Skip type checking of declaration files
+      "forceConsistentCasingInFileNames": true, // Ensure consistent casing in file names
+      "outDir": "./dist",                      // Output compiled files to 'dist' folder
+      "resolveJsonModule": true                // Allow importing JSON files
+    },
+    "include": ["*.ts"],  // Include all TypeScript files in the root directory
+    "exclude": ["node_modules"]  // Exclude the 'node_modules' folder
+  }
+  
