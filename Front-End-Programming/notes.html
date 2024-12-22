@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes: Exercises - Frontend & Vite</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        p {
+            font-size: 16px;
+            margin: 10px 0;
+            color: #555;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        .content {
+            margin-top: 30px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        h3 {
+            color: #333;
+        }
+
+        .exercise {
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .exercise h3 {
+            color: #333;
+        }
+
+        .exercise ul {
+            color: #333;
+        }
+
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Notes: Exercises - Frontend & Vite</h1>
+
+    <div class="content">
+        <p><strong>Objective:</strong> Build a student management dashboard using pure HTML, CSS, and JavaScript. This includes a table to display student records and a few interactive features like adding rows, changing the font dynamically, and showing browser information.</p>
+
+        <h2>Exercise 1: Basic Frontend</h2>
+        <div class="exercise">
+            <h3>Features to Implement:</h3>
+            <ul>
+                <li><strong>Table Structure:</strong> A table to display student data with headers: ID, Name, Age, Grade.</li>
+                <li><strong>Add Student Button:</strong> A button to add a new row to the table with dummy student data.</li>
+                <li><strong>Highlight New Rows:</strong> Dynamically apply a highlight CSS class to newly added rows.</li>
+                <li><strong>Change Font Button:</strong> A button that changes the font of the table using a Google Font.</li>
+                <li><strong>Display Browser Info:</strong> Show browser name, version, window dimensions, and user agent below the table.</li>
+            </ul>
+            <h3>Steps Involved:</h3>
+            <ul>
+                <li><strong>DOM Manipulation:</strong> Use JavaScript to dynamically add rows to the table and highlight them.</li>
+                <li><strong>CSS Styling:</strong> Use inline CSS to style the table, buttons, and highlighted rows.</li>
+                <li><strong>Google Font Integration:</strong> Dynamically load a Google font when a button is clicked.</li>
+                <li><strong>Browser Information:</strong> Use JavaScript to fetch and display the browser name, version, and other details.</li>
+            </ul>
+            <h3>CSS Manipulation:</h3>
+            <ul>
+                <li>Style the table with borders, padding, and background color.</li>
+                <li>Apply a `highlight` class to newly added rows for emphasis (e.g., change background color).</li>
+                <li>Style buttons with hover effects for interactivity.</li>
+            </ul>
+        </div>
+
+        
+        <h2>Exercise 2: Using Tools</h2>
+        <div class="exercise">
+            <h3>Objective:</h3>
+            <p>Learn how to package and structure projects using TypeScript. Follow a development life cycle: Development → Testing → Production.</p>
+            
+            <h3>Steps:</h3>
+            <ul>
+                <li><strong>Set Up a TypeScript Project:</strong>
+                    <ul>
+                        <li>Initialize a new project using a package manager like npm.</li>
+                        <li>Configure TypeScript using a tsconfig.json file.</li>
+                    </ul>
+                </li>
+                <li><strong>Three Problems to Solve:</strong>
+                    <ul>
+                        <li><strong>Problem 1:</strong> Load a JSON file, render a table dynamically, and include sorting functionality.</li>
+                        <li><strong>Problem 2:</strong> Fetch data from a CSV file using PapaParse. Enhance the table with column filtering and row highlighting.</li>
+                        <li><strong>Problem 3:</strong> Integrate a build tool (e.g., tsc for transpilation). Package your project and ensure the app works in both development and production environments.</li>
+                    </ul>
+                </li>
+                <li><strong>Dev, Test, and Production Life Cycle:</strong> Use Vite in your package.json for:
+                    <ul>
+                        <li>Development server with live reload.</li>
+                        <li>Linting and type-checking during development.</li>
+                        <li>Production build with bundling.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        
+        <h2>Exercise 3: Starting with Vite</h2>
+        <div class="exercise">
+            <h3>Objective:</h3>
+            <p>Learn how to use Vite to scaffold, configure, and build projects with modern tools.</p>
+            
+            <h3>Steps:</h3>
+            <ul>
+                <li><strong>Starter Template (JavaScript):</strong> Initialize a Vite project using the JavaScript template:
+                    <pre>npm create vite@latest my-js-app -- --template vanilla</pre>
+                </li>
+                <li><strong>Task:</strong> Rebuild the student management dashboard from Exercise 1 using Vite, load student data from a JSON file, and display it in a table.</li>
+                <li><strong>Starter Template (TypeScript):</strong> Initialize a Vite project using the TypeScript template:
+                    <pre>npm create vite@latest my-ts-app -- --template vanilla-ts</pre>
+                </li>
+                <li><strong>Task:</strong> Enhance the student management dashboard by fetching data from a CSV file, parse it using PapaParse, and display it using AG Grid. Modularize the code for data loading, parsing, and rendering.</li>
+                <li><strong>Vite with Extended Options:</strong> Define a CSS file with classes like m-1, m-2 until m-8. Each m-n is n*2px. Now do the same in SCSS, with loops. See how you can do it with Vite (it supports SCSS).</li>
+            </ul>
+        </div>
+        
+        <h2>Exercise 4: Vite Full Exercise</h2>
+        <div class="exercise">
+            <h3>Objective:</h3>
+            <p>Use Vite to its full potential, implementing advanced features and best practices.</p>
+            
+            <h3>Steps:</h3>
+            <ul>
+                <li><strong>Environment-Specific Configurations:</strong> Set up .env.development and .env.production files to define separate API endpoints.</li>
+                <li><strong>Task:</strong> Create an app that fetches data from an endpoint specified in the environment variables. Ensure the correct environment file is used in development (npm run dev) and production (npm run build).</li>
+                <li><strong>Advanced Vite Practices:</strong> Use vite-plugin-checker to integrate real-time TypeScript type-checking and vite-plugin-eslint for linting in the development workflow. Add linting and type-checking tools to your Vite TypeScript project and display errors during the build process.</li>
+                <li><strong>Build Upon Previous Work:</strong> Add advanced features like lazy loading modules, code splitting, optimize for production by ensuring minification and tree-shaking, and test the performance of the final build.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="image-container">
+        <h3>Example Screenshots</h3>
+        <img src="Screenshot 2024-12-23 022801.png" alt="Demo Screenshot 1">
+        <img src="Screenshot 2024-12-23 022830.png" alt="Demo Screenshot 2">
+        <img src="Screenshot (80).png" alt="Demo Screenshot 3">
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Basic Frontend & Vite Exercises</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Component Development Notes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #ff6f61;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .code-block {
+            background-color: #2e2e2e;
+            color: #fff;
+            padding: 10px;
+            font-family: Consolas, monospace;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        .notes-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin: 20px auto;
+        }
+
+        .key-points {
+            background-color: #eef7f3;
+            padding: 10px;
+            border-left: 5px solid #ff6f61;
+            margin-bottom: 20px;
+        }
+
+        .key-points ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .key-points li {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 14px;
+            padding: 10px;
+            background-color: #f1f1f1;
+            margin-top: 30px;
+        }
+
+        .solution-link {
+            font-size: 18px;
+            font-weight: bold;
+            color: #ff6161;
+            margin-bottom: 20px;
+        }
+
+        .solution-link a {
+            color: #6196ff;
+            text-decoration: underline;
+            font-weight: normal;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Web Component Development Notes</h1>
+    </header>
+
+    <main>
+        <div class="notes-container">
+            <div class="solution-link">
+                <p>View the complete solution here:</p>
+                <a href="https://temp-wether.vercel.app/" target="_blank">Weather Widget Solution</a>
+            </div>
+
+            <h2>Project Overview</h2>
+            <p>In this project, I created a simple weather widget using Web Components. The widget displays the weather information
+                for a given city using the OpenWeather API. I made the widget reusable, so it could be embedded into any page and
+                dynamically updated based on the city attribute passed to it.</p>
+
+            <h2>Steps Taken</h2>
+            <p>To create this weather widget, I followed these steps:</p>
+            <div class="key-points">
+                <ul>
+                    <li>Created a custom web component using the `<strong>city-weather</strong>` tag.</li>
+                    <li>Fetched weather data using the OpenWeather API for the given city.</li>
+                    <li>Used the Shadow DOM to encapsulate styles and prevent CSS leaks from the rest of the page.</li>
+                    <li>Created a form to allow users to change the city and update the displayed weather data dynamically.</li>
+                    <li>Created multiple pages that used the same widget with different default cities.</li>
+                </ul>
+            </div>
+
+            <h2>Code Implementation</h2>
+            <p>The custom element `city-weather` fetches weather data and renders it inside a shadow DOM. Here's the JavaScript code for the custom element:</p>
+
+          
+            <h2>Challenges Faced</h2>
+            <p>While developing the weather widget, I faced the following challenges:</p>
+            <div class="key-points">
+                <ul>
+                    <li><strong>API Integration:</strong> Integrating the OpenWeather API for real-time weather data was a bit tricky at first due to API key management and rate limits. I made sure to properly handle errors and fallback scenarios.</li>
+                    <li><strong>Dynamic Attribute Updates:</strong> Handling the dynamic update of the city attribute on the widget was challenging. I had to listen for changes in the attribute and re-render the component accordingly.</li>
+                    <li><strong>Cross-Browser Compatibility:</strong> Ensuring that the Web Component worked across all modern browsers, especially with Shadow DOM encapsulation, took some time. I made sure to test the component on multiple browsers to ensure its reliability.</li>
+                    <li><strong>Form Interaction:</strong> Updating the widget based on user input required connecting a form to the custom element. I had to ensure that the form correctly updated the city attribute and the component re-rendered with new data.</li>
+                </ul>
+            </div>
+
+            <h2>Conclusion</h2>
+            <p>Creating this weather widget was a great experience as it helped me understand Web Component development and how to encapsulate functionality in a reusable way. Despite facing challenges like API integration and dynamic attribute handling, I was able to resolve them and create a functional and interactive widget. The widget can be used across various web pages and is easy to update dynamically.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Web Component Development. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

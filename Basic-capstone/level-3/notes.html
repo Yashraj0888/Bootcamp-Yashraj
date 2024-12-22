@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Website Design Document for E-commerce</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #2a9d8f;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .key-points {
+            background-color: #eef7f3;
+            padding: 10px;
+            border-left: 5px solid #2a9d8f;
+            margin-bottom: 20px;
+        }
+
+        .key-points ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .key-points li {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .code-block {
+            background-color: #2e2e2e;
+            color: #fff;
+            padding: 10px;
+            font-family: Consolas, monospace;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 14px;
+            padding: 10px;
+            background-color: #f1f1f1;
+            margin-top: 30px;
+        }
+
+        .note {
+            background-color: #fff3e6;
+            padding: 10px;
+            border-left: 5px solid #ff6f61;
+            margin-top: 20px;
+        }
+
+        .link {
+            font-size: 18px;
+            text-decoration: underline;
+            color: #474848;
+            font-weight: normal;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Static Website Design Document for E-commerce</h1>
+        </h1>
+        <p><a href="https://e-com-wppl.vercel.app/" class="link">View the Solution Here</a></p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Introduction</h2>
+            <p>This document outlines a design for building a static e-commerce website similar to Amazon or Flipkart.
+                While building large-scale dynamic websites with millions of catalog items traditionally requires
+                server-side processing, this design explores how such websites can be built statically, hosted on
+                platforms like Netlify or Cloudflare, and still provide a good user experience.</p>
+        </section>
+
+        <section>
+            <h2>Key Features</h2>
+            <div class="key-points">
+                <ul>
+                    <li><strong>Static Site Generation (SSG):</strong> The site will be pre-built using SSG tools like Hugo, Next.js, or 11ty. These tools allow generating static HTML files at build time, rather than relying on a dynamic app server. This ensures the site can be hosted without needing a backend server.</li>
+                    <li><strong>Catalog Management:</strong> Product data (catalog) will be statically generated. This means that, rather than dynamically generating product listings via a database query, we will use a pre-generated data file (like JSON or Markdown) that is compiled into HTML during the build process.</li>
+                    <li><strong>Search Functionality:</strong> To enable search functionality, we can use client-side JavaScript. The search will work by indexing the catalog data on the client side and searching it locally in the browser. Features like typos, stemming, and proximity can be handled using JavaScript libraries such as Fuse.js.</li>
+                    <li><strong>Performance Optimization:</strong> The use of static generation ensures faster loading times, as pages are pre-built and served from a CDN. Additionally, lazy loading, image compression, and caching strategies can be applied to optimize performance.</li>
+                    <li><strong>Reduced Functionality:</strong> The purchase process, inventory tracking, and real-time stock updates will not be part of this static version. Users will be directed to third-party sites (like Amazon or Flipkart) for completing purchases. This keeps the scope focused on product discovery and browsing.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Implementation Rationale</h2>
+            <p>The use of static site generation offers several benefits for building an e-commerce site:</p>
+            <div class="key-points">
+                <ul>
+                    <li><strong>Speed:</strong> Static sites load faster than dynamic sites because they are pre-generated and served as static HTML files from a CDN, without the need for server-side processing.</li>
+                    <li><strong>Cost-Effective:</strong> Hosting a static website is inexpensive and can be done on platforms like Netlify, GitHub Pages, or Cloudflare, which offer free hosting for static sites.</li>
+                    <li><strong>Scalability:</strong> Static sites are inherently scalable, as they don't rely on a traditional server and can easily handle large numbers of concurrent users without issues.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>How to Meet Performance Demands</h2>
+            <p>To meet the performance demands of an e-commerce site, even with reduced functionality, we will use the following approaches:</p>
+            <div class="key-points">
+                <ul>
+                    <li><strong>Search Optimization:</strong> Using client-side JavaScript libraries (e.g., Fuse.js), we will index the product catalog and implement fuzzy search with features like typo tolerance and stemming. This allows for a responsive and efficient search experience directly in the browser.</li>
+                    <li><strong>Data Pre-generation:</strong> The catalog will be pre-built at build time (during the static generation process). This means that all product information is available as static HTML, reducing the need for client-side data fetching and ensuring fast page loads.</li>
+                    <li><strong>Lazy Loading & Code Splitting:</strong> Use lazy loading for images and code splitting to ensure that only the necessary assets are loaded initially. Other assets will load only when required, improving initial load times.</li>
+                    <li><strong>CDN and Caching:</strong> By hosting the website on a Content Delivery Network (CDN), static assets like images, stylesheets, and scripts will be served from the closest server to the user, reducing latency and improving performance. Caching strategies will ensure that assets are cached effectively to reduce server load and enhance the user experience.</li>
+                    <li><strong>Reduced Catalog Size:</strong> While large catalogs are a feature of platforms like Amazon and Flipkart, for this static prototype, we will limit the catalog to a manageable size that can be easily handled by modern browsers (e.g., up to 10,000 products). Techniques such as pagination and indexing will be used to avoid overwhelming the browser.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Prototype</h2>
+            <p>The prototype will be built using the following assumptions:</p>
+            <ul>
+                <li>Product data (catalog) will be stored in a JSON file or Markdown format.</li>
+                <li>The search will be implemented using a client-side JavaScript library like Fuse.js for fast and fuzzy search functionality.</li>
+                <li>The site will be visually appealing and optimized for performance, using static site generation tools like Hugo or Next.js.</li>
+            </ul>
+
+            <p>To demonstrate how the site can be built statically, we will create a simplified version of the catalog page with search functionality.</p>
+        </section>
+
+        <section>
+            <h2>Conclusion</h2>
+            <p>This design document demonstrates how an e-commerce website like Amazon or Flipkart can be built as a static website, with reduced functionality. By leveraging static site generation tools, client-side search, and performance optimizations, we can create a fast, scalable, and cost-effective prototype that works well for product discovery and browsing. The purchase process and real-time inventory management will be excluded, but users will be directed to external platforms for completing purchases.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Static E-commerce Prototype. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

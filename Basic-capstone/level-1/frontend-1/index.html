@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Exploration</title>
+    <link rel="stylesheet" href="./src/index.css">
+</head>
+<body>
+    <header>
+        <h1>Data Exploration</h1>
+        <div class="filters">
+            <input type="text" id="search-bar" placeholder="Search...">
+            <select id="filter-region">
+                <option value="">All Regions</option>
+            </select>
+            <select id="filter-country">
+                <option value="">All Countries</option>
+            </select>
+            <select id="filter-item-type">
+                <option value="">All Item Types</option>
+            </select>
+            
+        </div>
+        <button id="export-btn">Export Filtered Data</button>
+    </header>
+
+    <main>
+        <div id="papers-list" class="card-container"></div>
+        <div id="pagination-controls" class="pagination-controls"></div>
+    </main>
+
+    <script src="./src/main.js"></script>
+</body>
+</html>

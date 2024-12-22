@@ -1,0 +1,286 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Premium Wireless Headphones",
+      "price": 199.99,
+      "description": "High-fidelity wireless headphones with active noise cancellation and 30-hour battery life.",
+      "category": "Electronics",
+      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&q=80",
+      "tags": ["audio", "wireless", "premium"]
+    },
+    {
+      "id": "2",
+      "name": "Smart Watch Pro",
+      "price": 299.99,
+      "description": "Advanced smartwatch with health tracking, GPS, and seamless smartphone integration.",
+      "category": "Electronics",
+      "image": "https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=500&q=80",
+      "tags": ["wearable", "smart", "fitness"]
+    },
+    {
+      "id": "3",
+      "name": "Leather Messenger Bag",
+      "price": 129.99,
+      "description": "Handcrafted genuine leather messenger bag, perfect for daily use and business.",
+      "category": "Fashion",
+      "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&q=80",
+      "tags": ["leather", "accessories", "business"]
+    },
+    {
+      "id": "4",
+      "name": "Ultra HD Smart TV",
+      "price": 799.99,
+      "description": "55-inch 4K Ultra HD Smart TV with HDR and built-in streaming apps.",
+      "category": "Electronics",
+      "image": "https://images.unsplash.com/photo-1593784991095-a205069470b6?w=500&q=80",
+      "tags": ["tv", "entertainment", "smart"]
+    },
+    {
+      "id": "5",
+      "name": "Designer Sunglasses",
+      "price": 159.99,
+      "description": "Premium UV-protected sunglasses with polarized lenses.",
+      "category": "Fashion",
+      "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=500&q=80",
+      "tags": ["accessories", "summer", "premium"]
+    },
+    {
+      "id": "6",
+      "name": "Gaming Laptop",
+      "price": 1299.99,
+      "description": "High-performance gaming laptop with RTX graphics and 144Hz display.",
+      "category": "Electronics",
+      "image": "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=500&q=80",
+      "tags": ["gaming", "laptop", "premium"]
+    },
+    {
+      "id": "7",
+      "name": "Leather Wallet",
+      "price": 49.99,
+      "description": "Genuine leather wallet with RFID protection and multiple card slots.",
+      "category": "Fashion",
+      "image": "https://images.unsplash.com/photo-1627123424574-724758594e93?w=500&q=80",
+      "tags": ["leather", "accessories"]
+    },
+    {
+      "id": "8",
+      "name": "Wireless Earbuds",
+      "price": 149.99,
+      "description": "True wireless earbuds with active noise cancellation and wireless charging.",
+      "category": "Electronics",
+      "image": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=500&q=80",
+      "tags": ["audio", "wireless"]
+    },
+    {
+      "id": "9",
+      "name": "Portable Power Bank",
+      "price": 39.99,
+      "description": "10,000mAh portable power bank with fast-charging support.",
+      "category": "Electronics",
+      "image": "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=500&q=80",
+      "tags": ["charging", "portable", "convenience"]
+    },
+    {
+      "id": "10",
+      "name": "Luxury Watch",
+      "price": 499.99,
+      "description": "Elegant wristwatch with sapphire glass and automatic movement.",
+      "category": "Fashion",
+      "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&q=80",
+      "tags": ["luxury", "fashion", "accessories"]
+    },
+    {
+      "id": "11",
+      "name": "Bluetooth Speaker",
+      "price": 89.99,
+      "description": "Compact Bluetooth speaker with rich bass and 12-hour battery life.",
+      "category": "Electronics",
+      "image": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=500&q=80",
+      "tags": ["audio", "wireless", "portable"]
+    },
+    {
+      "id": "12",
+      "name": "Eco-Friendly Backpack",
+      "price": 89.99,
+      "description": "Sustainable backpack made from recycled materials, perfect for travel.",
+      "category": "Fashion",
+      "image": "https://images.unsplash.com/photo-1612252026725-68c8b1c7ef48?w=500&q=80",
+      "tags": ["eco-friendly", "accessories", "travel"]
+    },
+    {
+      "id": "13",
+      "name": "Fitness Tracker Band",
+      "price": 59.99,
+      "description": "Waterproof fitness tracker with heart rate monitoring and sleep tracking.",
+      "category": "Electronics",
+      "image": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=500&q=80",
+      "tags": ["fitness", "wearable", "health"]
+    },
+    {
+      "id": "14",
+      "name": "Classic Leather Shoes",
+      "price": 199.99,
+      "description": "Handcrafted leather shoes, perfect for formal and semi-formal occasions.",
+      "category": "Fashion",
+      "image": "https://images.unsplash.com/photo-1561406639-6ef2b53c52d4?w=500&q=80",
+      "tags": ["leather", "footwear", "formal"]
+    },
+    {
+      "id": "15",
+      "name": "Noise-Cancelling Microphone",
+      "price": 99.99,
+      "description": "Professional-grade microphone with noise-cancelling technology for studio recording.",
+      "category": "Electronics",
+      "image": "https://images.unsplash.com/photo-1615573198390-b74b4fcbe27d?w=500&q=80",
+      "tags": ["audio", "recording", "professional"]
+    },
+    {
+      "id": "16",
+      "name": "Smart Home Security Camera",
+      "price": 129.99,
+      "description": "HD wireless security camera with night vision and two-way audio communication.",
+      "category": "Electronics",
+      "image": "https://images.unsplash.com/photo-1558000143-a78f8299c40b?w=500&q=80",
+      "tags": ["smart home", "security", "wireless"]
+    },
+    {
+      "id": "17",
+      "name": "Designer Crossbody Bag",
+      "price": 179.99,
+      "description": "Elegant crossbody bag made from premium vegan leather with gold-tone hardware.",
+      "category": "Fashion",
+      "image": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500&q=80",
+      "tags": ["bags", "accessories", "vegan"]
+    },
+    {
+      "id": "18",
+      "name": "Mechanical Gaming Keyboard",
+      "price": 149.99,
+      "description": "RGB mechanical keyboard with custom switches and programmable macros.",
+      "category": "Electronics",
+      "image": "https://images.unsplash.com/photo-1595225476474-488a4436246c?w=500&q=80",
+      "tags": ["gaming", "peripherals", "RGB"]
+    },
+    {
+      "id": "19",
+      "name": "Athletic Running Shoes",
+      "price": 129.99,
+      "description": "Breathable mesh running shoes with responsive cushioning technology.",
+      "category": "Fashion",
+      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&q=80",
+      "tags": ["footwear", "sports", "athletic"]
+    },
+    {
+      "id": "20",
+      "name": "4K Webcam",
+      "price": 199.99,
+      "description": "Ultra HD webcam with auto-focus and low-light correction for professional streaming.",
+      "category": "Electronics",
+      "image": "https://images.unsplash.com/photo-1587826080692-f439cd0b70da?w=500&q=80",
+      "tags": ["streaming", "video", "professional"]
+    },
+    {
+      "id": "21",
+      "name": "Minimalist Watch",
+      "price": 159.99,
+      "description": "Sleek, minimalist design watch with Japanese movement and sapphire crystal.",
+      "category": "Fashion",
+      "image": "https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=500&q=80",
+      "tags": ["accessories", "minimalist", "watches"]
+    },
+    {
+      "id": "22",
+      "name": "Smart Coffee Maker",
+      "price": 199.99,
+      "description": "WiFi-enabled coffee maker with smartphone control and scheduling features.",
+      "category": "Electronics",
+      "image": "https://images.unsplash.com/photo-1520970014086-2208d157c9e2?w=500&q=80",
+      "tags": ["smart home", "kitchen", "coffee"]
+    },
+    {
+      "id": "23",
+      "name": "Polarized Sports Sunglasses",
+      "price": 89.99,
+      "description": "Lightweight sports sunglasses with interchangeable lenses and UV protection.",
+      "category": "Fashion",
+      "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=500&q=80",
+      "tags": ["sports", "accessories", "eyewear"]
+    },
+    {
+      "id": "24",
+      "name": "Wireless Gaming Mouse",
+      "price": 79.99,
+      "description": "High-precision wireless gaming mouse with adjustable DPI and programmable buttons.",
+      "category": "Electronics",
+      "image": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=500&q=80",
+      "tags": ["gaming", "peripherals", "wireless"]
+    },
+    {
+      "id": "25",
+      "name": "Travel Duffel Bag",
+      "price": 139.99,
+      "description": "Spacious water-resistant duffel bag with shoe compartment and laptop sleeve.",
+      "category": "Fashion",
+      "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&q=80",
+      "tags": ["travel", "bags", "luggage"]
+    },
+    {
+      "id": "26",
+      "name": "Smart Door Lock",
+      "price": 249.99,
+      "description": "WiFi-enabled smart lock with fingerprint scanner and remote access control.",
+      "category": "Electronics",
+      "image": "https://images.unsplash.com/photo-1558002038-1055907df827?w=500&q=80",
+      "tags": ["smart home", "security", "wireless"]
+    },
+    {
+      "id": "27",
+      "name": "Premium Laptop Sleeve",
+      "price": 49.99,
+      "description": "Waterproof laptop sleeve with plush interior and accessory pockets.",
+      "category": "Fashion",
+      "image": "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?w=500&q=80",
+      "tags": ["accessories", "laptop", "protection"]
+    },
+    {
+      "id": "28",
+      "name": "Wireless Charging Pad",
+      "price": 39.99,
+      "description": "Fast wireless charging pad with multiple coils for flexible device placement.",
+      "category": "Electronics",
+      "image": "https://images.unsplash.com/photo-1586816879360-004f5b0c51e3?w=500&q=80",
+      "tags": ["charging", "wireless", "accessories"]
+    },
+    {
+      "id": "29",
+      "name": "Canvas Sneakers",
+      "price": 69.99,
+      "description": "Classic canvas sneakers with comfortable cushioning and durable construction.",
+      "category": "Fashion",
+      "image": "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=500&q=80",
+      "tags": ["footwear", "casual", "shoes"]
+    },
+    {
+      "id": "30",
+      "name": "Smart Plant Sensor",
+      "price": 29.99,
+      "description": "Bluetooth plant sensor that monitors soil moisture, light, and temperature.",
+      "category": "Electronics",
+      "image": "https://images.unsplash.com/photo-1585336261022-680e295ce3fe?w=500&q=80",
+      "tags": ["smart home", "garden", "sensors"]
+    }
+  ],
+  "categories": [
+    {
+      "id": "electronics",
+      "name": "Electronics",
+      "description": "Latest gadgets and electronic devices"
+    },
+    {
+      "id": "fashion",
+      "name": "Fashion",
+      "description": "Trendy fashion accessories and clothing"
+    }
+  ]
+}
