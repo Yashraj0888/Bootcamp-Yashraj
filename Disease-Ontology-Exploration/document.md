@@ -33,6 +33,9 @@ Develop an interactive widget to facilitate biologists in specifying and explori
    - Display a brief description of the disease.
    - Provide links to recent research papers on the disease.
 
+
+
+
 ---
 
 ## Understanding Key Concepts
@@ -82,28 +85,6 @@ The application will:
 
 ---
 
-## Evaluation Criteria
-### Completeness
-- The widget addresses all specified requirements and supports optional features.
-
-### Usability
-- Intuitive UI with a seamless search and exploration process.
-
-### Resourcefulness
-- Thorough research and integration of disease classification systems.
-
-### Documentation
-- Clear explanation of the research, development process, and widget usage.
-
----
-
-## Bonus Features
-1. **Disease Descriptions**:
-   - Display brief descriptions sourced from EFO or MONDO.
-2. **Research Links**:
-   - Display links to the latest research papers, including titles and authors.
-
----
 
 ## Notes on Research and Development
 - **Research Notes**:
